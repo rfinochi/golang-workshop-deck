@@ -109,7 +109,7 @@ http://lagash.com
 
 .caption [[http://bit.ly/go-workshop-ex-02][http://bit.ly/go-workshop-ex-02]]
 
-.play -edit -numbers ./resources/src/hello-world.go
+.play -edit -numbers ./resources/src/hello-world.code
 
 Comandos basicos desde consola
 
@@ -128,22 +128,22 @@ Comandos basicos desde consola
 
 .caption [[http://bit.ly/go-workshop-ex-03][http://bit.ly/go-workshop-ex-03]]
 
-.play -edit -numbers ./resources/src/variables.go
+.play -edit -numbers ./resources/src/variables.code
 
 * Ejercicio 4 - Tipos
 
 .caption [[http://bit.ly/go-workshop-ex-04][http://bit.ly/go-workshop-ex-04]]
 
-.play -edit -numbers ./resources/src/types.go
+.play -edit -numbers ./resources/src/types.code
 
 * Ejercicio 5 - Operadores
 
 .caption [[http://bit.ly/go-workshop-ex-05][http://bit.ly/go-workshop-ex-05]]
 
-.play -edit -numbers ./resources/src/operators.go
+.play -edit -numbers ./resources/src/operators.code
 
 * Ejercicio 6 - Funciones
 
 .caption [[http://bit.ly/go-workshop-ex-06][http://bit.ly/go-workshop-ex-06]]
 
-.play -edit -numbers ./resources/src/functions.go
+.play -edit -numbers ./resources/src/functions.code
