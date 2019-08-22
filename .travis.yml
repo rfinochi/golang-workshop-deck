@@ -4,8 +4,3 @@ go:
   - 1.12.x
 git:
   depth: 1
-
- deploy:
-  provider: gae
-  keyfile: client-secret.json
-  project: shockbyte-go-workshop
