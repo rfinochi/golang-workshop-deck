@@ -109,7 +109,7 @@ http://lagash.com
 
 .caption [[https://github.com/rfinochi/golang-workshop-src/tree/master/02-hello-world][Ejercicio 2]]
 
-.play -edit -numbers ./resources/src/hello-world.code
+.play -edit -numbers ./resources/src/hello-world.go
 
 Comandos basicos desde consola
 
@@ -128,22 +128,22 @@ Comandos basicos desde consola
 
 .caption [[https://github.com/rfinochi/golang-workshop-src/tree/master/03-variables][Ejercicio 3]]
 
-.play -edit -numbers ./resources/src/variables.code
+.play -edit -numbers ./resources/src/variables.go
 
 * Ejercicio 4 - Tipos
 
 .caption [[https://github.com/rfinochi/golang-workshop-src/tree/master/04-types][Ejercicio 4]]
 
-.play -edit -numbers ./resources/src/types.code
+.play -edit -numbers ./resources/src/types.go
 
 * Ejercicio 5 - Operadores
 
 .caption [[https://github.com/rfinochi/golang-workshop-src/tree/master/05-operators][Ejercicio 5]]
 
-.play -edit -numbers ./resources/src/operators.code
+.play -edit -numbers ./resources/src/operators.go
 
 * Ejercicio 6 - Funciones
 
 .caption [[https://github.com/rfinochi/golang-workshop-src/tree/master/06-functions][Ejercicio 6]]
 
-.play -edit -numbers ./resources/src/functions.code
+.play -edit -numbers ./resources/src/functions.go
