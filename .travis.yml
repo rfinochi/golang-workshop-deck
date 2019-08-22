@@ -1,0 +1,6 @@
+dist: xenial
+language: go
+go:
+  - 1.12.x
+git:
+  depth: 1
