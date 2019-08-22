@@ -102,12 +102,12 @@ http://lagash.com
 
 * Ejercicio 1 - Instalacion
 
-.caption [[http://bit.ly/go-workshop-ex-01][http://bit.ly/go-workshop-ex-01]]
+.caption [[https://github.com/rfinochi/golang-workshop-src/tree/master/01-installation][Ejercicio 1]]
 .image ./resources/images/installation.png 450 _
 
 * Ejercicio 2 - Hello World
 
-.caption [[http://bit.ly/go-workshop-ex-02][http://bit.ly/go-workshop-ex-02]]
+.caption [[https://github.com/rfinochi/golang-workshop-src/tree/master/02-hello-world][Ejercicio 2]]
 
 .play -edit -numbers ./resources/src/hello-world.code
 
@@ -126,24 +126,24 @@ Comandos basicos desde consola
 
 * Ejercicio 3 - Variables
 
-.caption [[http://bit.ly/go-workshop-ex-03][http://bit.ly/go-workshop-ex-03]]
+.caption [[https://github.com/rfinochi/golang-workshop-src/tree/master/03-variables][Ejercicio 3]]
 
 .play -edit -numbers ./resources/src/variables.code
 
 * Ejercicio 4 - Tipos
 
-.caption [[http://bit.ly/go-workshop-ex-04][http://bit.ly/go-workshop-ex-04]]
+.caption [[https://github.com/rfinochi/golang-workshop-src/tree/master/04-types][Ejercicio 4]]
 
 .play -edit -numbers ./resources/src/types.code
 
 * Ejercicio 5 - Operadores
 
-.caption [[http://bit.ly/go-workshop-ex-05][http://bit.ly/go-workshop-ex-05]]
+.caption [[https://github.com/rfinochi/golang-workshop-src/tree/master/05-operators][Ejercicio 5]]
 
 .play -edit -numbers ./resources/src/operators.code
 
 * Ejercicio 6 - Funciones
 
-.caption [[http://bit.ly/go-workshop-ex-06][http://bit.ly/go-workshop-ex-06]]
+.caption [[https://github.com/rfinochi/golang-workshop-src/tree/master/06-functions][Ejercicio 6]]
 
 .play -edit -numbers ./resources/src/functions.code
