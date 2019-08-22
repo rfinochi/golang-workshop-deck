@@ -1,13 +1,18 @@
 dist: xenial
+
 language: go
+
 go:
 - 1.12.x
+
 git:
   depth: 1
+
 deploy:
   provider: gae
   keyfile: client-secret.json
   project: shockbyte-go-workshop
+
 before_install:
 - openssl aes-256-cbc -K $encrypted_ee833b65bc84_key -iv $encrypted_ee833b65bc84_iv
   -in client-secret.json.enc -out client-secret.json -d
