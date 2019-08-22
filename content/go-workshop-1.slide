@@ -1,0 +1,149 @@
+Go  Workshop - Dia 1
+Tags: golang
+
+Rodolfo Finochietti
+Chief Delivery Officer, Lagash
+rodolfof@lagash.com
+http://lagash.com
+@rodolfof
+
+* Most popular languages
+
+.image ./resources/images/most_popular_languages.jpg 500 _
+.caption [[https://insights.stackoverflow.com/survey/2018][Stack Overflow Developer Survey 2018]]
+
+* Most popular (programming) languages
+
+.image ./resources/images/most_popular_programming_languages.jpg 500 _
+.caption [[https://insights.stackoverflow.com/survey/2018][Stack Overflow Developer Survey 2018]]
+
+* Most loved languages
+
+.image ./resources/images/most_loved_languages.jpg 500 _
+.caption [[https://insights.stackoverflow.com/survey/2018][Stack Overflow Developer Survey 2018]]
+
+* Por que otro lenguaje de programacion?
+
+- Programar _software_ _de_ _sistema_ es dificil
+	Las computadoras tiene muchos nucleos
+- Hoy en dia un lenguaje de programacion es mas que solo un compilador
+	Manejo de librerias y dependencias
+	Velocidad para compilar
+	Facilidad para programar
+	Testing
+- *Sin* *Friccion*
+- *Autocontenido*
+	... you can build a production binary on your Mac and ship it up to a Linux server 
+	and just run it without any crazy installs or any worrying about dependency conflicts. 
+
+	Brian Ketelsen, Microsoft. 
+
+* Quienes
+
+- Ken Thompson
+	Bell Labs, Unix, Unix Shell, UTF-8
+- Rob Pike
+	Bell Labs, Unix, Plan 9, UTF-8
+- Robert Griesemer
+	Google V8, Java HotSpot
+
+.image ./resources/images/authors.jpg 180 _
+.caption [[https://www.youtube.com/watch?v=3yghHvvZQmA][Meet the authors]]
+
+* Por que
+
+	Programming had become too difficult and the choice of languages was partly to blame. 
+	One had to choose either efficient compilation, efficient execution, or ease of programming; 
+	all three were not available in the same mainstream language.
+
+- Arranca como proyecto en 2007 dentro de Google. Goals: eliminar la *lentitud* y la *torpeza* a la hora de desarrollar software en Google.
+- Anunciado al mundo en 2009, en 2012 se estabiliza la API con la version 1.0 . La version actual es la 1.12.x, siguiendo su promesa de [[https://golang.org/doc/go1compat][compatibilidad]].
+- Muchos programadores, familiarizados por la universidad con lenguajes _procedurales_ como `C`.
+- Es imperativo que los desarrolladores puedan ser *productivos* *muy* *rapidamente* con lenguajes y herramientas _serias_.
+- El lenguaje fue pensado por y para personas que escriben, leen y debuggean grandes piezas de software.
+
+* Premisas
+
+- Multi-plataforma
+	No corre en una maquina virtual
+- Estatico
+- Type-safe / Memory-safe
+- Garbage Collector
+- Compilacion rapida
+
+* Caracteristicas
+
+- _Battery_ _included_
+	Net / Http
+	IO
+	Concurrency
+	Built in Web Server
+	Built in Testing framework
+	Integracion con Git
+- Imperativo y estructurado 
+	Lineal, paso a paso
+	Loops, conditionals
+	Fuertemente tipado (pero con inferencia de tipos)
+- *No* *orientado* *a* *objetos*
+	Structs instead of classes 
+	No Inheritance (mejor componer que heredar)
+	No overloading (pero si polimorfismo)
+
+* Caracteristicas
+
+- Funciones son _first_ _class_ _citizens_
+	Pueden ser pasadas como parametros
+- Concurrency 
+- Multiple return values
+
+* Manos a la obra
+
+.image ./resources/images/handy_manny.jpg 550 _
+
+* Ejercicio 1 - Instalacion
+
+.caption [[http://bit.ly/go-workshop-ex-01][http://bit.ly/go-workshop-ex-01]]
+.image ./resources/images/installation.png 450 _
+
+* Ejercicio 2 - Hello World
+
+.caption [[http://bit.ly/go-workshop-ex-02][http://bit.ly/go-workshop-ex-02]]
+
+.play -edit -numbers ./resources/src/hello-world.go
+
+Comandos basicos desde consola
+
+	go command [arguments]
+
+	build     Compila paquetes y dependencias
+	clean     Remueve archivos object     
+	get       Descarga e instala paquetes y dependencias
+	install   Compila e instala paquetes y dependencias
+	run       Compila y corre paquetes y dependencias
+	test      Testea paquetes
+	fmt       Formatea tu codigo
+	...
+
+* Ejercicio 3 - Variables
+
+.caption [[http://bit.ly/go-workshop-ex-03][http://bit.ly/go-workshop-ex-03]]
+
+.play -edit -numbers ./resources/src/variables.go
+
+* Ejercicio 4 - Tipos
+
+.caption [[http://bit.ly/go-workshop-ex-04][http://bit.ly/go-workshop-ex-04]]
+
+.play -edit -numbers ./resources/src/types.go
+
+* Ejercicio 5 - Operadores
+
+.caption [[http://bit.ly/go-workshop-ex-05][http://bit.ly/go-workshop-ex-05]]
+
+.play -edit -numbers ./resources/src/operators.go
+
+* Ejercicio 6 - Funciones
+
+.caption [[http://bit.ly/go-workshop-ex-06][http://bit.ly/go-workshop-ex-06]]
+
+.play -edit -numbers ./resources/src/functions.go
