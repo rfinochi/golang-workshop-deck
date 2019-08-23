@@ -183,3 +183,16 @@ Comandos basicos desde consola
 .caption [[https://github.com/rfinochi/golang-workshop-src/tree/master/07-control-statments][Ejercicio 7]]
 
 .play -edit -numbers ./resources/src/switch.go
+
+* Packages
+
+.caption [[https://github.com/rfinochi/golang-workshop-src/tree/master/08-packages][Ejercicio 8]]
+
+- Los directorios son llamados _packages_ en Golang
+- Para importar paquetes se debe indicar el path al directorio que lo contiene
+
+Estructura de directorios:
+
+	bin (binarios creados con el comando go install)
+	pkg (package archives, versiones compiladas de los paquetes)
+	src (codigo fuente)
