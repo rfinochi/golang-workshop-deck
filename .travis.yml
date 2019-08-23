@@ -8,15 +8,6 @@ go:
 git:
   depth: 1
 
-before_install:
-- mv ./content/resources/src/hello-world.go ./content/resources/src/hello-world.code
-- mv ./content/resources/src/variables.go ./content/resources/src/variables.code
-- mv ./content/resources/src/types.go ./content/resources/src/types.code
-- mv ./content/resources/src/functions.go ./content/resources/src/functions.code
-- mv ./content/resources/src/operators.go ./content/resources/src/operators.code
-- openssl aes-256-cbc -K $encrypted_5b91aa6414c7_key -iv $encrypted_5b91aa6414c7_iv
-  -in client-secret.json.enc -out client-secret.json -d
-
 before_deploy:
 - mv ./content/resources/src/hello-world.code ./content/resources/src/hello-world.go
 - mv ./content/resources/src/variables.code ./content/resources/src/variables.go
@@ -27,4 +18,4 @@ before_deploy:
 deploy:
   provider: gae
   keyfile: client-secret.json
-  project: shockbyte-golang-workshop
+  project: golang-workshop-decks
