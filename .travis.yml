@@ -23,8 +23,3 @@ before_deploy:
 - mv ./content/resources/src/types.code ./content/resources/src/types.go
 - mv ./content/resources/src/operators.code ./content/resources/src/operators.go
 - mv ./content/resources/src/functions.code ./content/resources/src/functions.go
-
-deploy:
-  provider: gae
-  keyfile: client-secret.json
-  project: shockbyte-go-workshop
