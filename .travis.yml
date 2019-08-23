@@ -12,8 +12,14 @@ before_install:
 - mv ./content/resources/src/hello-world.go ./content/resources/src/hello-world.code
 - mv ./content/resources/src/variables.go ./content/resources/src/variables.code
 - mv ./content/resources/src/types.go ./content/resources/src/types.code
-- mv ./content/resources/src/functions.go ./content/resources/src/functions.code
 - mv ./content/resources/src/operators.go ./content/resources/src/operators.code
+- mv ./content/resources/src/functions.go ./content/resources/src/functions.code
+- mv ./content/resources/src/if.go ./content/resources/src/if.code
+- mv ./content/resources/src/switch.go ./content/resources/src/switch.code
+- mv ./content/resources/src/for-simple.go ./content/resources/src/for-simple.code
+- mv ./content/resources/src/for-simpleBreak.go ./content/resources/src/for-simpleBreak.code
+- mv ./content/resources/src/for-simpleContinue.go ./content/resources/src/for-simpleContinue.code
+- mv ./content/resources/src/for-printTower.go ./content/resources/src/for-printTower.code
 - openssl aes-256-cbc -K $encrypted_5b91aa6414c7_key -iv $encrypted_5b91aa6414c7_iv
   -in client-secret.json.enc -out client-secret.json -d
 
@@ -23,6 +29,11 @@ before_deploy:
 - mv ./content/resources/src/types.code ./content/resources/src/types.go
 - mv ./content/resources/src/operators.code ./content/resources/src/operators.go
 - mv ./content/resources/src/functions.code ./content/resources/src/functions.go
+- mv ./content/resources/src/switch.code ./content/resources/src/switch.go
+- mv ./content/resources/src/for-simple.code ./content/resources/src/for-simple.go
+- mv ./content/resources/src/for-simpleBreak.code ./content/resources/src/for-simpleBreak.go
+- mv ./content/resources/src/for-simpleContinue.code ./content/resources/src/for-simpleContinue.go
+- mv ./content/resources/src/for-printTower.code ./content/resources/src/for-printTower.go
 
 deploy:
   provider: gae
