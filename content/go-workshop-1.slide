@@ -100,12 +100,12 @@ http://lagash.com
 
 .image ./resources/images/handy_manny.jpg 550 _
 
-* Ejercicio 1 - Instalacion
+* Instalacion
 
 .caption [[https://github.com/rfinochi/golang-workshop-src/tree/master/01-installation][Ejercicio 1]]
 .image ./resources/images/installation.png 450 _
 
-* Ejercicio 2 - Hello World
+* Hello World
 
 .caption [[https://github.com/rfinochi/golang-workshop-src/tree/master/02-hello-world][Ejercicio 2]]
 
@@ -124,26 +124,56 @@ Comandos basicos desde consola
 	fmt       Formatea tu codigo
 	...
 
-* Ejercicio 3 - Variables
+* Variables
 
 .caption [[https://github.com/rfinochi/golang-workshop-src/tree/master/03-variables][Ejercicio 3]]
 
 .play -edit -numbers ./resources/src/variables.go
 
-* Ejercicio 4 - Tipos
+* Tipos
 
 .caption [[https://github.com/rfinochi/golang-workshop-src/tree/master/04-types][Ejercicio 4]]
 
 .play -edit -numbers ./resources/src/types.go
 
-* Ejercicio 5 - Operadores
+* Operadores
 
 .caption [[https://github.com/rfinochi/golang-workshop-src/tree/master/05-operators][Ejercicio 5]]
 
 .play -edit -numbers ./resources/src/operators.go
 
-* Ejercicio 6 - Funciones
+* Funciones
 
 .caption [[https://github.com/rfinochi/golang-workshop-src/tree/master/06-functions][Ejercicio 6]]
 
 .play -edit -numbers ./resources/src/functions.go
+
+* Instrucciones de control - if
+
+.caption [[https://github.com/rfinochi/golang-workshop-src/tree/master/07-control-statments][Ejercicio 7]]
+
+.play -edit -numbers ./resources/src/if.go
+
+* Instrucciones de control - for
+
+.caption [[https://github.com/rfinochi/golang-workshop-src/tree/master/07-control-statments][Ejercicio 7]]
+
+.play -edit -numbers ./resources/src/for-simple.go
+
+* Instrucciones de control - for
+
+.caption [[https://github.com/rfinochi/golang-workshop-src/tree/master/07-control-statments][Ejercicio 7]]
+
+.play -edit -numbers ./resources/src/for-simpleBreak.go
+
+* Instrucciones de control - for
+
+.caption [[https://github.com/rfinochi/golang-workshop-src/tree/master/07-control-statments][Ejercicio 7]]
+
+.play -edit -numbers ./resources/src/for-simpleContinue.go
+
+* Instrucciones de control - for
+
+.caption [[https://github.com/rfinochi/golang-workshop-src/tree/master/07-control-statments][Ejercicio 7]]
+
+.play -edit -numbers ./resources/src/for-printTower.go
