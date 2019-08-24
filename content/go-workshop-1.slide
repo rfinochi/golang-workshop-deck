@@ -1,4 +1,5 @@
 Go  Workshop - Dia 1
+https://golang-workshop.shockbyte.net
 Tags: golang
 
 Rodolfo Finochietti
@@ -196,3 +197,27 @@ Estructura de directorios:
 	bin (binarios creados con el comando go install)
 	pkg (package archives, versiones compiladas de los paquetes)
 	src (codigo fuente)
+
+* Arreglos
+
+.caption [[https://github.com/rfinochi/golang-workshop-src/tree/master/09-arrays][Ejercicio 9]]
+
+.play -edit -numbers ./resources/src/arrays.go
+
+* Arreglos - Value Type
+
+.caption [[https://github.com/rfinochi/golang-workshop-src/tree/master/09-arrays][Ejercicio 9]]
+
+.play -edit -numbers ./resources/src/arrays-value-type.go
+
+* Arreglos - Slices
+
+.caption [[https://github.com/rfinochi/golang-workshop-src/tree/master/09-arrays][Ejercicio 9]]
+
+.image ./resources/images/slices.jpg 400 _
+
+* Arreglos - Slices
+
+.caption [[https://github.com/rfinochi/golang-workshop-src/tree/master/09-arrays][Ejercicio 9]]
+
+.play -edit -numbers ./resources/src/arrays-slices.go

@@ -1,4 +1,5 @@
 Go  Workshop
+https://golang-workshop.shockbyte.net
 Tags: golang
 
 Rodolfo Finochietti
@@ -7,16 +8,30 @@ rodolfof@lagash.com
 http://lagash.com
 @rodolfof
 
+* Bienvenidos!
+
+.image ./resources/images/gopher.jpg 500 _
+.caption [[https://blog.golang.org/gopher][The Go Gopher]]
+
+* Lo me gusta de Go
+
+	Keep your mind open, your head up
+	You'll never, ever get old
+	Go!
+
+.caption [[https://www.youtube.com/watch?v=3TJC48BRBn8][Go! - Tones On Tail]]
+
 * Agenda
 
 - Dia 1
 	Intro
 	Instalacion
 	Basics
+	Testing
 - Dia 2
 	Concurrencia
-	Testing
-		
+	DB Access
+	Http Client
 - Dia 3
-	Gin
-	Deploy
+	Gin Framework
+	Deploy in Google App Engine
