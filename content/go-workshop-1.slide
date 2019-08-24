@@ -221,3 +221,9 @@ Estructura de directorios:
 .caption [[https://github.com/rfinochi/golang-workshop-src/tree/master/09-arrays][Ejercicio 9]]
 
 .play -edit -numbers ./resources/src/arrays-slices.go
+
+* Arreglos - Archivos
+
+.caption [[https://github.com/rfinochi/golang-workshop-src/tree/master/10-files][Ejercicio 10]]
+
+.code -edit -numbers ./resources/src/files.go
