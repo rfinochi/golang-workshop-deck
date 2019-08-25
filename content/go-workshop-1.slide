@@ -232,4 +232,22 @@ Estructura de directorios:
 
 .caption [[https://github.com/rfinochi/golang-workshop-src/tree/master/11-maps][Ejercicio 11]]
 
-.code -edit -numbers ./resources/src/maps.go
+.play -edit -numbers ./resources/src/maps.go
+
+* Linea de commandos - Args
+
+.caption [[https://github.com/rfinochi/golang-workshop-src/tree/master/12-cmdline][Ejercicio 12]]
+
+.code -edit -numbers ./resources/src/cmdline-args.go
+
+* Linea de commandos - Args
+
+.caption [[https://github.com/rfinochi/golang-workshop-src/tree/master/12-cmdline][Ejercicio 12]]
+
+.code -edit -numbers ./resources/src/cmdline-flags.go
+
+* Linea de commandos - Variables de entorno
+
+.caption [[https://github.com/rfinochi/golang-workshop-src/tree/master/12-cmdline][Ejercicio 12]]
+
+.code -edit -numbers ./resources/src/cmdline-env.go

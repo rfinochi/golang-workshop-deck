@@ -27,11 +27,15 @@ http://lagash.com
 	Intro
 	Instalacion
 	Basics
+	Packages
 	Testing
 - Dia 2
-	Concurrencia
-	DB Access
+	Structs
+	Interfaces
+	Concurrency
 	Http Client
+	Building a RESTful API
 - Dia 3
 	Gin Framework
+	DB Access
 	Deploy in Google App Engine
