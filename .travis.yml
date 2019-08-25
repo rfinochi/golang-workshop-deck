@@ -25,6 +25,7 @@ before_install:
 - mv ./content/resources/src/arrays-value-type.go ./content/resources/src/arrays-value-type.code
 - mv ./content/resources/src/arrays-slices.go ./content/resources/src/arrays-slices.code
 - mv ./content/resources/src/files.go ./content/resources/src/files.code
+- mv ./content/resources/src/files.go ./content/resources/src/maps.code
 - openssl aes-256-cbc -K $encrypted_5b91aa6414c7_key -iv $encrypted_5b91aa6414c7_iv
   -in client-secret.json.enc -out client-secret.json -d
 
@@ -45,6 +46,7 @@ before_deploy:
 - mv ./content/resources/src/arrays-value-type.code ./content/resources/src/arrays-value-type.go
 - mv ./content/resources/src/arrays-slices.code ./content/resources/src/arrays-slices.go
 - mv ./content/resources/src/files.code ./content/resources/src/files.go
+- mv ./content/resources/src/files.code ./content/resources/src/maps.go
 
 deploy:
   provider: gae

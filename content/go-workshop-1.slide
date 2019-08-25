@@ -222,8 +222,14 @@ Estructura de directorios:
 
 .play -edit -numbers ./resources/src/arrays-slices.go
 
-* Arreglos - Archivos
+* Archivos
 
 .caption [[https://github.com/rfinochi/golang-workshop-src/tree/master/10-files][Ejercicio 10]]
 
 .code -edit -numbers ./resources/src/files.go
+
+* Maps
+
+.caption [[https://github.com/rfinochi/golang-workshop-src/tree/master/11-maps][Ejercicio 11]]
+
+.code -edit -numbers ./resources/src/maps.go
