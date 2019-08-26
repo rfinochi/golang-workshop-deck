@@ -241,6 +241,8 @@ Hints:
 	r := []rune(s)
 	s := string(r)
 
+- La funcion _len_ devuelve la cantidad de elementos de un arreglo.
+
 * Challenge  1.2 (Opcional)
 
 .image ./resources/images/chalenge-accepted.jpg 150 _
