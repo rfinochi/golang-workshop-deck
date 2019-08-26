@@ -59,8 +59,7 @@ http://lagash.com
 
 - Arranca como proyecto en 2007 dentro de Google. Goals: eliminar la *lentitud* y la *torpeza* a la hora de desarrollar software en Google.
 - Anunciado al mundo en 2009, en 2012 se estabiliza la API con la version 1.0 . La version actual es la 1.12.x, siguiendo su promesa de [[https://golang.org/doc/go1compat][compatibilidad]].
-- Muchos programadores, familiarizados por la universidad con lenguajes _procedurales_ como `C`.
-- Es imperativo que los desarrolladores puedan ser *productivos* *muy* *rapidamente* con lenguajes y herramientas _serias_.
+- Es necesario que los desarrolladores puedan ser *productivos* *muy* *rapidamente* con lenguajes y herramientas _serias_.
 - El lenguaje fue pensado por y para personas que escriben, leen y debuggean grandes piezas de software.
 
 * Premisas
@@ -185,8 +184,9 @@ Comandos basicos desde consola
 
 .play -edit -numbers ./resources/src/switch.go
 
-.caption [[https://developer.chrome.com/native-client][*nacl]]
+* Review time
 
+.image ./resources/images/review-time.png 500 _
 
 * Packages
 
@@ -233,7 +233,7 @@ Crear una funcion _Reverse_ que devuelva un string pasado por parametro.
 
 Hints:
 
-- El tipo de dato [[https://yourbasic.org/golang/rune][rune]] es una representacion de un _code_ _point_ (valor numerico de un caracter en un codificacion determinada)
+- El tipo de dato [[https://yourbasic.org/golang/rune][rune]] es una representacion de un _code_ _point_ (valor numerico de un caracter en un codificacion determinada).
 - _string_ se puede usar para convertir un _rune_ a un caracter, y viceversa.
 
 	r := []rune(s)
@@ -243,13 +243,13 @@ Hints:
 
 .image ./resources/images/chalenge-accepted.jpg 150 _
 
-Invertir el _casing_ de las vocales.
+Modificar la funcion _Reverse_ para invertir el _casing_ de las vocales (solamente).
 
 * Challenge  1.3
 
 .image ./resources/images/chalenge-accepted.jpg 150 _
 
-Crear un paquete _stringutil_ que contega la funcion _Reverse_ y se utilice en funcion _main_.
+Crear un paquete _stringutil_ que contega la funcion _Reverse_ y se utilice en funcion la _main_.
 
 * Archivos
 
@@ -289,7 +289,7 @@ Cambiar el programa para que el parametro string de la funcion _Reverse_ se obte
 
 * Testing
 
-- Golang posee un framework de testing incluido en la standars library.
+- Golang posee un framework de testing incluido en la standard library.
 - Se encuentra en el paquete _testing_.
 - Todo archivo Go con el sujifo *_test.go* es considerado un test suite en Golang.
 - En cada test suite podemos correr:
@@ -308,11 +308,11 @@ Cambiar el programa para que el parametro string de la funcion _Reverse_ se obte
 
 * Testing - Code Coverage
 
-Se puede controlar el code coverage con el comando
+Se puede controlar el code coverage con el comando:
 
 	go test -cover
 
-Se pueden exportar los resultados y verlos en html con
+Se pueden exportar los resultados y verlos en html con:
 
 	go test -coverprofile=coverage.out
 	go tool cover -html=coverage.out
@@ -333,16 +333,16 @@ Se pueden exportar los resultados y verlos en html con
 
 .caption [[https://github.com/rfinochi/golang-workshop-src/tree/master/13-testing][Ejercicio 13]]
 
-Un benchmark se ejecuta con el comando *go* *test* *-bench=.* (el parametro es regexp para indicar cuales benchmarks queremos correr).
+Un benchmark se ejecuta con el comando *go* *test* *-bench=.* (el parametro _bench_ es _regex_ para indicar cuales benchmarks queremos correr).
 
-El resultado es
+El resultado es:
 
 	% go test -bench=.
 	PASS
 	BenchmarkFibonacci   5000000               509 ns/op
 	ok      github.com/rfinochi/golang-workshop       3.084s
 
-La segunda linea inidica el valor final de *b.N* y el tiempo promedio de ejecucion (nanosegundos/operacion).
+La segunda linea indica el valor final de *b.N* y el tiempo promedio de ejecucion en nanosegundos/operacion.
 
 * Testing - Benchmark
 
