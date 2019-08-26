@@ -235,13 +235,12 @@ Crear una funcion _Reverse_ que devuelva un string pasado por parametro.
 
 Hints:
 
+- La funcion _len_ devuelve la cantidad de elementos de un arreglo.
 - El tipo de dato [[https://yourbasic.org/golang/rune][rune]] es una representacion de un _code_ _point_ (valor numerico de un caracter en un codificacion determinada).
 - La funcion de convertion _string_ se puede usar para convertir un _rune_ a un caracter, y viceversa.
 
 	r := []rune(s)
 	s := string(r)
-
-- La funcion _len_ devuelve la cantidad de elementos de un arreglo.
 
 * Challenge  1.2 (Opcional)
 
