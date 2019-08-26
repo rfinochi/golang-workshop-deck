@@ -1,0 +1,65 @@
+Go  Workshop - Dia 2
+https://golang-workshop.io
+Tags: golang
+
+Rodolfo Finochietti
+Chief Delivery Officer, Lagash
+rodolfof@lagash.com
+http://lagash.com
+@rodolfof
+
+* Structs
+
+.caption [[https://github.com/rfinochi/golang-workshop-src/tree/master/14-structs][Ejercicio 14]]
+
+- Coleccion de campos tipados
+- Pueden contener metodos
+- Pero no son clases estrictamente hablando
+
+Go favorece la composicion por sobre la herencia:
+
+- [[https://en.wikipedia.org/wiki/Structural_type_system][Structural Typing]]: Como Duck Typing pero en tiempo de compilacion
+
+- Embedding: [[https://en.wikipedia.org/wiki/Fragile_base_class][The fragile base class problem]]
+
+.code ./resources/src/structs.go
+
+* Structs anidados
+
+.caption [[https://github.com/rfinochi/golang-workshop-src/tree/master/14-structs][Ejercicio 14]]
+
+[[http://blog.ralch.com/tutorial/design-patterns/golang-composite/][Composition Desing Pattern]]
+
+.code ./resources/src/structs-nested.go
+
+* Structs - Metodos
+
+.caption [[https://github.com/rfinochi/golang-workshop-src/tree/master/14-structs][Ejercicio 14]]
+
+.code ./resources/src/structs-methods.go
+
+* Punteros
+
+.caption [[https://github.com/rfinochi/golang-workshop-src/tree/master/14-structs][Ejercicio 14]]
+
+- Golang soporta punteros para actualizar valores pero no admite aritmetica de punteros como en C. 
+- *** se usa como prefijo para definir un puntero para de un tipo dado.
+
+.code ./resources/src/structs-pointers.go
+
+* Interfaces
+
+.caption [[https://github.com/rfinochi/golang-workshop-src/tree/master/15-interfaces][Ejercicio 15]]
+
+- El feature mas importante del lenguaje segun Rob Pike.
+- Extensamente usadas en la standard library.
+- Es una manera de soportar metodos genericos.
+- Se puede hacer composicion de interfaces.
+- *No* *es* *necesario* *de* *implementarlas* *explicitamente*.
+
+Lo mas importante de las interfaces es la cultura detras de ellas, piezas chicas que abstraen funcionalidades.
+
+- "Be conservative in what you send, be liberal in what you accept"
+- "The bigger the interface, the smallest the abstraction"
+
+[[https://youtu.be/F4wUrj6pmSI][Understanding Go Interfaces]]

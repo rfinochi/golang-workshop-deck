@@ -255,7 +255,7 @@ Crear un paquete _stringutil_ que contega la funcion _Reverse_ y se utilice en f
 
 .caption [[https://github.com/rfinochi/golang-workshop-src/tree/master/10-files][Ejercicio 10]]
 
-.code -edit -numbers ./resources/src/files.go
+.code -numbers ./resources/src/files.go
 
 * Maps
 
@@ -267,19 +267,19 @@ Crear un paquete _stringutil_ que contega la funcion _Reverse_ y se utilice en f
 
 .caption [[https://github.com/rfinochi/golang-workshop-src/tree/master/12-cmdline][Ejercicio 12]]
 
-.code -edit -numbers ./resources/src/cmdline-args.go
+.code -numbers ./resources/src/cmdline-args.go
 
 * Linea de commandos - Flags
 
 .caption [[https://github.com/rfinochi/golang-workshop-src/tree/master/12-cmdline][Ejercicio 12]]
 
-.code -edit -numbers ./resources/src/cmdline-flags.go
+.code -numbers ./resources/src/cmdline-flags.go
 
 * Linea de commandos - Variables de entorno
 
 .caption [[https://github.com/rfinochi/golang-workshop-src/tree/master/12-cmdline][Ejercicio 12]]
 
-.code -edit -numbers ./resources/src/cmdline-env.go
+.code -numbers ./resources/src/cmdline-env.go
 
 * Challenge  1.4 (Opcional)
 
@@ -301,7 +301,7 @@ Cambiar el programa para que el parametro string de la funcion _Reverse_ se obte
 
 .caption [[https://github.com/rfinochi/golang-workshop-src/tree/master/13-testing][Ejercicio 13]]
 
-.code -edit -numbers ./resources/src/test.go
+.code -numbers ./resources/src/test.go
 
 - Cada funcion TestXxxx en un test suite es un test.
 - El comando *go* *test* corre los test del proyecto.
@@ -322,7 +322,7 @@ Se pueden exportar los resultados y verlos en html con:
 
 .caption [[https://github.com/rfinochi/golang-workshop-src/tree/master/13-testing][Ejercicio 13]]
 
-.code -edit -numbers ./resources/src/test-benchmark.go
+.code -numbers ./resources/src/test-benchmark.go
 
 - Cada funcion BenchmarkXxxx es un benchmark.
 - Un Benchmark no es un test.
@@ -348,7 +348,7 @@ La segunda linea indica el valor final de *b.N* y el tiempo promedio de ejecucio
 
 .caption [[https://github.com/rfinochi/golang-workshop-src/tree/master/13-testing][Ejercicio 13]]
 
-.code -edit -numbers ./resources/src/test-benchmark-wrong.go
+.code -numbers ./resources/src/test-benchmark-wrong.go
 
 Un loop es un operacion crucial en un benchmark, *cuidado!*
 
@@ -356,7 +356,7 @@ Un loop es un operacion crucial en un benchmark, *cuidado!*
 
 .caption [[https://github.com/rfinochi/golang-workshop-src/tree/master/13-testing][Ejercicio 13]]
 
-.code -edit -numbers ./resources/src/test-example.go
+.code -numbers ./resources/src/test-example.go
 
 - Los _examples_ son snippets de codigo Golang que se muestran como parte de la documentacion.
 - Estan verificados por que tambien se corren como tests. 
