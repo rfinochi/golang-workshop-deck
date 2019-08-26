@@ -21,6 +21,10 @@ http://lagash.com
 
 .caption [[https://www.youtube.com/watch?v=3TJC48BRBn8][Go! - Tones On Tail]]
 
+.image ./resources/images/golang-logo.svg 150 _
+
+.caption [[https://youtu.be/bmZNaUcwBt4][The Why of Go]]
+
 * Agenda
 
 - Dia 1
@@ -38,4 +42,4 @@ http://lagash.com
 - Dia 3
 	Gin Framework
 	DB Access
-	Deploy in Google App Engine
+	Bonus Track: Deploy in Google App Engine

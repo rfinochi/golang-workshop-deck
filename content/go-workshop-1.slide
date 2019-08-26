@@ -187,6 +187,7 @@ Comandos basicos desde consola
 
 .caption [[https://developer.chrome.com/native-client][*nacl]]
 
+
 * Packages
 
 .caption [[https://github.com/rfinochi/golang-workshop-src/tree/master/08-packages][Ejercicio 8]]
@@ -224,6 +225,32 @@ Estructura de directorios:
 
 .play -edit -numbers ./resources/src/arrays-slices.go
 
+* Challenge  1.1
+
+.image ./resources/images/chalenge-accepted.jpg 150 _
+
+Crear una funcion _Reverse_ que devuelva un string pasado por parametro.
+
+Hints:
+
+- El tipo de dato [[https://yourbasic.org/golang/rune][rune]] es una representacion de un _code_ _point_ (valor numerico de un caracter en un codificacion determinada)
+- _string_ se puede usar para convertir un _rune_ a un caracter, y viceversa.
+
+	r := []rune(s)
+	s := string(r)
+
+* Challenge  1.2 (Opcional)
+
+.image ./resources/images/chalenge-accepted.jpg 150 _
+
+Invertir el _casing_ de las vocales.
+
+* Challenge  1.3
+
+.image ./resources/images/chalenge-accepted.jpg 150 _
+
+Crear un paquete _stringutil_ que contega la funcion _Reverse_ y se utilice en funcion _main_.
+
 * Archivos
 
 .caption [[https://github.com/rfinochi/golang-workshop-src/tree/master/10-files][Ejercicio 10]]
@@ -253,6 +280,12 @@ Estructura de directorios:
 .caption [[https://github.com/rfinochi/golang-workshop-src/tree/master/12-cmdline][Ejercicio 12]]
 
 .code -edit -numbers ./resources/src/cmdline-env.go
+
+* Challenge  1.4 (Opcional)
+
+.image ./resources/images/chalenge-accepted.jpg 150 _
+
+Cambiar el programa para que el parametro string de la funcion _Reverse_ se obtenga desde la linea de comandos con un flag llamado _text_.
 
 * Testing
 
@@ -328,3 +361,9 @@ Un loop es un operacion crucial en un benchmark, *cuidado!*
 - Los _examples_ son snippets de codigo Golang que se muestran como parte de la documentacion.
 - Estan verificados por que tambien se corren como tests. 
 - Tambien se pueden ejecutar por el usuario al leer la documentacion web generada con la herramienta _godoc_ (el usuario dispone de un boton _Run_ _Test_).
+
+* Challenge  1.5
+
+.image ./resources/images/chalenge-accepted.jpg 150 _
+
+Crear un _test_, un _benchmark_, y un _example_ para la funcion _Reverse_.
