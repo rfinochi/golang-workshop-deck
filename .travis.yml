@@ -29,6 +29,10 @@ before_install:
 - mv ./content/resources/src/cmdline-args.go ./content/resources/src/cmdline-args.code
 - mv ./content/resources/src/cmdline-flags.go ./content/resources/src/cmdline-flags.code
 - mv ./content/resources/src/cmdline-env.go ./content/resources/src/cmdline-env.code
+- mv ./content/resources/src/test.go ./content/resources/src/test.code
+- mv ./content/resources/src/test-benchmark.go ./content/resources/src/test-benchmark.code
+- mv ./content/resources/src/test-benchmark-wrong.go ./content/resources/src/test-benchmark-wrong.code
+- mv ./content/resources/src/files.go ./content/resources/src/files.code
 - openssl aes-256-cbc -K $encrypted_5b91aa6414c7_key -iv $encrypted_5b91aa6414c7_iv
   -in client-secret.json.enc -out client-secret.json -d
 
@@ -52,6 +56,10 @@ before_deploy:
 - mv ./content/resources/src/cmdline-args.code ./content/resources/src/cmdline-args.go
 - mv ./content/resources/src/cmdline-flags.code ./content/resources/src/cmdline-flags.go
 - mv ./content/resources/src/cmdline-env.code ./content/resources/src/cmdline-env.go
+- mv ./content/resources/src/test.code ./content/resources/src/test.go
+- mv ./content/resources/src/test-benchmark.code ./content/resources/src/test-benchmark.go
+- mv ./content/resources/src/test-benchmark-wrong.code ./content/resources/src/test-benchmark-wrong.go
+- mv ./content/resources/src/test-example.code ./content/resources/src/test-example.go
 
 deploy:
   provider: gae

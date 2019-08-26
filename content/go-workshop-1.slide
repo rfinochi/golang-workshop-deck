@@ -79,7 +79,7 @@ http://lagash.com
 	IO
 	Concurrency
 	Built in Web Server
-	Built in Testing framework
+	Built in Testing Framework
 	Integracion con Git
 - Imperativo y estructurado 
 	Lineal, paso a paso
@@ -122,7 +122,7 @@ Comandos basicos desde consola
 	install   Compila e instala paquetes y dependencias
 	run       Compila y corre paquetes y dependencias
 	test      Testea paquetes
-	fmt       Formatea tu codigo
+	fmt       Formatea el codigo
 	...
 
 * Variables
@@ -185,6 +185,8 @@ Comandos basicos desde consola
 
 .play -edit -numbers ./resources/src/switch.go
 
+.caption [[https://developer.chrome.com/native-client][*nacl]]
+
 * Packages
 
 .caption [[https://github.com/rfinochi/golang-workshop-src/tree/master/08-packages][Ejercicio 8]]
@@ -234,13 +236,13 @@ Estructura de directorios:
 
 .play -edit -numbers ./resources/src/maps.go
 
-* Linea de commandos - Args
+* Linea de commandos - Argumentos
 
 .caption [[https://github.com/rfinochi/golang-workshop-src/tree/master/12-cmdline][Ejercicio 12]]
 
 .code -edit -numbers ./resources/src/cmdline-args.go
 
-* Linea de commandos - Args
+* Linea de commandos - Flags
 
 .caption [[https://github.com/rfinochi/golang-workshop-src/tree/master/12-cmdline][Ejercicio 12]]
 
@@ -251,3 +253,78 @@ Estructura de directorios:
 .caption [[https://github.com/rfinochi/golang-workshop-src/tree/master/12-cmdline][Ejercicio 12]]
 
 .code -edit -numbers ./resources/src/cmdline-env.go
+
+* Testing
+
+- Golang posee un framework de testing incluido en la standars library.
+- Se encuentra en el paquete _testing_.
+- Todo archivo Go con el sujifo *_test.go* es considerado un test suite en Golang.
+- En cada test suite podemos correr:
+	Tests
+	Benchmarks
+	Examples
+
+* Testing
+
+.caption [[https://github.com/rfinochi/golang-workshop-src/tree/master/13-testing][Ejercicio 13]]
+
+.code -edit -numbers ./resources/src/test.go
+
+- Cada funcion TestXxxx en un test suite es un test.
+- El comando *go* *test* corre los test del proyecto.
+
+* Testing - Code Coverage
+
+Se puede controlar el code coverage con el comando
+
+	go test -cover
+
+Se pueden exportar los resultados y verlos en html con
+
+	go test -coverprofile=coverage.out
+	go tool cover -html=coverage.out
+
+
+* Testing - Benchmark
+
+.caption [[https://github.com/rfinochi/golang-workshop-src/tree/master/13-testing][Ejercicio 13]]
+
+.code -edit -numbers ./resources/src/test-benchmark.go
+
+- Cada funcion BenchmarkXxxx es un benchmark.
+- Un Benchmark no es un test.
+- Las funciones de benchmark son ejecutadas muchas veces por el framework de test.
+- El valor *b.N* se incrementa hasta que el framework el test esta safisfecho d ela estabilidadl del benchmark.
+
+* Testing - Benchmark
+
+.caption [[https://github.com/rfinochi/golang-workshop-src/tree/master/13-testing][Ejercicio 13]]
+
+Un benchmark se ejecuta con el comando *go* *test* *-bench=.* (el parametro es regexp para indicar cuales benchmarks queremos correr).
+
+El resultado es
+
+	% go test -bench=.
+	PASS
+	BenchmarkFibonacci   5000000               509 ns/op
+	ok      github.com/rfinochi/golang-workshop       3.084s
+
+La segunda linea inidica el valor final de *b.N* y el tiempo promedio de ejecucion (nanosegundos/operacion).
+
+* Testing - Benchmark
+
+.caption [[https://github.com/rfinochi/golang-workshop-src/tree/master/13-testing][Ejercicio 13]]
+
+.code -edit -numbers ./resources/src/test-benchmark-wrong.go
+
+Un loop es un operacion crucial en un benchmark, *cuidado!*
+
+* Testing - Example
+
+.caption [[https://github.com/rfinochi/golang-workshop-src/tree/master/13-testing][Ejercicio 13]]
+
+.code -edit -numbers ./resources/src/test-example.go
+
+- Los _examples_ son snippets de codigo Golang que se muestran como parte de la documentacion.
+- Estan verificados por que tambien se corren como tests. 
+- Tambien se pueden ejecutar por el usuario al leer la documentacion web generada con la herramienta _godoc_ (el usuario dispone de un boton _Run_ _Test_).
