@@ -184,6 +184,8 @@ Comandos basicos desde consola
 
 .play -edit -numbers ./resources/src/switch.go
 
+.caption [[https://developer.chrome.com/native-client][nacl]]
+
 * Review time
 
 .image ./resources/images/review-time.png 500 _
