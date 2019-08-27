@@ -227,7 +227,7 @@ Estructura de directorios:
 
 .play -edit -numbers ./resources/src/arrays-slices.go
 
-* Challenge  1.1
+* Challenge 1.1
 
 .image ./resources/images/chalenge-accepted.jpg 150 _
 
@@ -242,13 +242,13 @@ Hints:
 	r := []rune(s)
 	s := string(r)
 
-* Challenge  1.2 (Opcional)
+* Challenge 1.2 (Opcional)
 
 .image ./resources/images/chalenge-accepted.jpg 150 _
 
 Modificar la funcion _Reverse_ para invertir el _casing_ de las vocales (solamente).
 
-* Challenge  1.3
+* Challenge 1.3
 
 .image ./resources/images/chalenge-accepted.jpg 150 _
 
@@ -284,7 +284,7 @@ Crear un paquete _stringutil_ que contega la funcion _Reverse_ y se utilice en f
 
 .code -numbers ./resources/src/cmdline-env.go
 
-* Challenge  1.4 (Opcional)
+* Challenge 1.4 (Opcional)
 
 .image ./resources/images/chalenge-accepted.jpg 150 _
 
@@ -330,7 +330,7 @@ Se pueden exportar los resultados y verlos en html con:
 - Cada funcion BenchmarkXxxx es un benchmark.
 - Un Benchmark no es un test.
 - Las funciones de benchmark son ejecutadas muchas veces por el framework de test.
-- El valor *b.N* se incrementa hasta que el framework el test esta safisfecho d ela estabilidadl del benchmark.
+- El valor *b.N* se incrementa hasta que el framework el test esta safisfecho de la estabilidad del benchmark.
 
 * Testing - Benchmark
 
@@ -365,7 +365,7 @@ Un loop es un operacion crucial en un benchmark, *cuidado!*
 - Estan verificados por que tambien se corren como tests. 
 - Tambien se pueden ejecutar por el usuario al leer la documentacion web generada con la herramienta _godoc_ (el usuario dispone de un boton _Run_ _Test_).
 
-* Challenge  1.5
+* Challenge 1.5
 
 .image ./resources/images/chalenge-accepted.jpg 150 _
 
