@@ -121,3 +121,30 @@ Crear un test para verificar el codigo creado en el challenge 2.1 anterior.
 .image ./resources/images/chalenge-accepted.jpg 150 _
 
 Agregar un nuevo tipo de pasajero 'empleado de aerolinea de ultimo minuto' cuyo descuento sea la suma de los descuentos de los tipos de pasajero 'empleado de aerolinea' y 'ultimo minuto'.
+
+* Concurrencia - Go-Routines
+
+- Golang provee un mecanismo sencillo para crear un nuevo thread.
+- Usando el constructor *go* antes de una llamada a una funcion (Go-Routines).
+
+.image ./resources/images/concurrency.png 300 _
+
+* Concurrencia - Channels
+
+- Los Channels son los pipes para conectar _goroutines_ concurrentes.
+- Sirven para enviar y recibir valores entre dos _goroutines_.
+
+.image ./resources/images/concurrency-channels.png 350 _
+
+* Concurrencia - Channels
+
+- Los Channels son los pipes para conectar _goroutines_ concurrentes.
+- Sirven para enviar y recibir valores entre dos _goroutines_.
+
+.image ./resources/images/concurrency-channels.png 350 _
+
+* Challenge 3
+
+.image ./resources/images/chalenge-accepted.jpg 150 _
+
+.caption [[https://github.com/rfinochi/golang-workshop-src/tree/master/challenge3][Instrucciones del challenge 3]]
