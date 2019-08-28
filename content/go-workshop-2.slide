@@ -173,7 +173,7 @@ Se instala con:
 
 * Programando una API REST - JSON Encoding
 
-.play -edit -numbers ./resources/src/rest-api.go
+.play -edit -numbers ./resources/src/rest-api-json.go
 
 * Challenge 4
 
