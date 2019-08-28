@@ -10,12 +10,16 @@ http://lagash.com
 
 * Most popular languages
 
-.image ./resources/images/most_popular_languages.jpg 500 _
+.image ./resources/images/most_popular_languages.jpg 430 _
 .caption [[https://insights.stackoverflow.com/survey/2018][Stack Overflow Developer Survey 2018]]
+
+"The street finds its own uses for things."
+Burning Chrome, William Gibson
 
 * Most popular (programming) languages
 
 .image ./resources/images/most_popular_programming_languages.jpg 500 _
+
 .caption [[https://insights.stackoverflow.com/survey/2018][Stack Overflow Developer Survey 2018]]
 
 * Most loved languages

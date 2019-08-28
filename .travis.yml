@@ -1,5 +1,3 @@
-dist: xenial
-
 language: go
 
 go:
@@ -37,6 +35,8 @@ before_install:
 - mv ./content/resources/src/structs-nested.go ./content/resources/src/structs-nested.code
 - mv ./content/resources/src/structs-methods.go ./content/resources/src/structs-methods.code
 - mv ./content/resources/src/structs-pointers.go ./content/resources/src/structs-pointers.code
+- mv ./content/resources/src/rest-api.go ./content/resources/src/rest-api.code
+- mv ./content/resources/src/rest-api-json.go ./content/resources/src/rest-api-json.code
 - openssl aes-256-cbc -K $encrypted_5b91aa6414c7_key -iv $encrypted_5b91aa6414c7_iv
   -in client-secret.json.enc -out client-secret.json -d
 
@@ -68,6 +68,8 @@ before_deploy:
 - mv ./content/resources/src/structs-nested.code ./content/resources/src/structs-nested.go
 - mv ./content/resources/src/structs-methods.code ./content/resources/src/structs-methods.go
 - mv ./content/resources/src/structs-pointers.code ./content/resources/src/structs-pointers.go
+- mv ./content/resources/src/rest-api.code ./content/resources/src/rest-api.go
+- mv ./content/resources/src/rest-api-json.code ./content/resources/src/rest-api-json.go
 
 deploy:
   provider: gae

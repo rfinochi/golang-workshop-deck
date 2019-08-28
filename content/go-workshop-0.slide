@@ -37,9 +37,10 @@ http://lagash.com
 	Structs
 	Interfaces
 	Concurrency
-	Http Client
 	Building a RESTful API
 - Dia 3
-	Gin Framework
+	Error Handling
+	Http Client
 	DB Access
+	Gin Framework
 	Bonus Track: Deploy in Google App Engine
