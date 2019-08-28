@@ -1,4 +1,4 @@
-Go  Workshop - Dia 1
+Go Workshop - Dia 1
 https://golang-workshop.io
 Tags: golang
 
@@ -196,8 +196,9 @@ Comandos basicos desde consola
 
 * Packages
 
-.caption [[https://github.com/rfinochi/golang-workshop-src/tree/master/08-packages][Ejercicio 8]]
+.caption [[https://github.com/rfinochi/golang-workshop-src/tree/master/08-packages/1][Ejercicio 8.1]]
 
+- Un paquete es una unidad de organizacion de codigo en Go.
 - Los directorios son llamados _packages_ en Golang
 - Para importar paquetes se debe indicar el path al directorio que lo contiene
 
@@ -206,6 +207,16 @@ Estructura de directorios:
 	bin (binarios creados con el comando go install)
 	pkg (package archives, versiones compiladas de los paquetes)
 	src (codigo fuente)
+
+* Packages - Visibilidad
+
+.caption [[https://github.com/rfinochi/golang-workshop-src/tree/master/08-packages/2][Ejercicio 8.2]]
+
+- Todos los identificadores definidos dentro de un paquete son visibles en todo el paquete.
+- Al importar un paquete, solo se puede acceder a sus identificadores _exportados_.
+- Un identificador se exporta si comienza con una letra mayuscula.
+
+*Cuidado*: No exportar identificadores no es una medidad de seguridad y no oculta o proteje ninguna informacion.
 
 * Arreglos
 

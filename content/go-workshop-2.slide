@@ -1,4 +1,4 @@
-Go  Workshop - Dia 2
+Go Workshop - Dia 2
 https://golang-workshop.io
 Tags: golang
 
@@ -16,7 +16,7 @@ http://lagash.com
 - Pueden contener metodos.
 - Pero no son clases estrictamente hablando.
 
-Go favorece la composicion por sobre la herencia:
+Golang favorece la composicion por sobre la herencia:
 
 - [[https://en.wikipedia.org/wiki/Structural_type_system][Structural Typing]]: Como Duck Typing pero en tiempo de compilacion.
 
@@ -91,7 +91,7 @@ Lo mas importante de las interfaces es la cultura detras de ellas, piezas chicas
 
 * Creacion de tipos - Struct Literal y &
 
-La inicializacion implicita, mas el _&_ es equivalente a _new_.
+La inicializacion implicita mas el _&_ es equivalente a _new_.
 
 	rodolfo := Person{"Rodolfo", 40}
 	rodolfoPointer := &Person{Name: "Rodolfo", Age: 40}
@@ -125,20 +125,13 @@ Agregar un nuevo tipo de pasajero 'empleado de aerolinea de ultimo minuto' cuyo 
 * Concurrencia - Go-Routines
 
 - Golang provee un mecanismo sencillo para crear un nuevo thread.
-- Usando el constructor *go* antes de una llamada a una funcion (Go-Routines).
+- Se usa el keyword *go* antes de una llamada a una funcion (Go-Routines).
 
 .image ./resources/images/concurrency.png 300 _
 
 * Concurrencia - Channels
 
-- Los Channels son los pipes para conectar _goroutines_ concurrentes.
-- Sirven para enviar y recibir valores entre dos _goroutines_.
-
-.image ./resources/images/concurrency-channels.png 350 _
-
-* Concurrencia - Channels
-
-- Los Channels son los pipes para conectar _goroutines_ concurrentes.
+- Los Channels son _pipes_ para conectar _goroutines_ concurrentes.
 - Sirven para enviar y recibir valores entre dos _goroutines_.
 
 .image ./resources/images/concurrency-channels.png 350 _
@@ -169,7 +162,7 @@ Se instala con:
 .caption [[https://github.com/rfinochi/golang-workshop-src/tree/master/18-rest-api][Ejercicio 18]]
 
 - Para trabajar JSON vamos a usar el paquete [[https://golang.org/pkg/encoding/json/][encoding/json]].
-- Se utilizan las funciones _Marshal_ y _Unmarshal _.
+- Se utilizan las funciones *Marshal* y *Encode*.
 
 * Programando una API REST - JSON Encoding
 
