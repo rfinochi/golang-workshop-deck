@@ -57,7 +57,7 @@ Golang favorece la composicion por sobre la herencia:
 - Se puede hacer composicion de interfaces.
 - *No* *es* *necesario* *de* *implementarlas* *explicitamente*.
 
-Lo mas importante de las interfaces es la cultura detras de ellas, piezas chicas que abstraen funcionalidades.
+Lo mas importante de las interfaces es la cultura detras de ellas, piezas de codigo chicas que abstraen funcionalidades.
 
 - "Be conservative in what you send, be liberal in what you accept"
 - "The bigger the interface, the smallest the abstraction"
@@ -114,7 +114,7 @@ Existen 3 tipos de pasajeros:
 
 .image ./resources/images/chalenge-accepted.jpg 150 _
 
-Crear un test para verificar el codigo creado en el challenge 2.1 anterior.
+Crear un _test_ para verificar el codigo creado en el challenge 2.1 anterior.
 
 * Challenge 2.3
 
