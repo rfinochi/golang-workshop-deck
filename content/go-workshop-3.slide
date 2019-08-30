@@ -12,13 +12,13 @@ http://lagash.com
 
 Official MongoDB Go driver
 	
-	go get -u go.mongodb.org/mongo-driver/mongo
+	$ go get -u go.mongodb.org/mongo-driver/mongo
 
 * Trabajando con MongoDB
 
 .caption [[https://github.com/rfinochi/golang-workshop-src/tree/master/19-dbaccess][Ejercicio 19]]
 
-* Challenge 4
+* Challenge 4.2
 
 .image ./resources/images/chalenge-accepted.jpg 150 _
 
@@ -27,3 +27,31 @@ Modificar la API Rest del challenge 4.1 para que pueda acceder a diferentes fuen
 Hints:
 
 - Se pueden copiar las funciones necesarias para operar con MongoDB desde el [[https://github.com/rfinochi/golang-workshop-src/tree/master/19-dbaccess][Ejercicio 19]].
+
+* Gin Web Framework
+
+.image ./resources/images/gin-logo.jpg 250 _
+
+"[[https://gin-gonic.com/][Gin]] is a high-performance micro-framework that delivers a very minimalistic framework that carries with it only the most essential features, libraries, and functionalities needed to build web applications and microservices."
+
+* Gin Web Framework - Caracteristicas
+
+- Speed
+- Crash-Free
+- Routing
+- JSON Validation
+- Error Management
+- Built-In Rendering
+
+* Gin Web Framework
+
+.caption [[https://github.com/rfinochi/golang-workshop-src/tree/master/20-gin][Ejercicio 20]]
+
+	$ go get -u github.com/gin-gonic/gin
+	$ go get -u github.com/gin-gonic/contrib/static
+
+* Challenge 4.3
+
+.image ./resources/images/chalenge-accepted.jpg 150 _
+
+Modificar la API Rest del challenge 4.2 para usar Gin.
