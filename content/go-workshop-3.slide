@@ -55,3 +55,26 @@ Hints:
 .image ./resources/images/chalenge-accepted.jpg 150 _
 
 Modificar la API Rest del challenge 4.2 para usar Gin.
+
+* Google App Engine Deploy 
+
+	$ gcloud projects create PROJECT_ID
+
+	$ gcloud config set project PROJECT_ID
+
+	$ gcloud app create
+
+* Google App Engine Deploy app.yaml (Service Configuration File)
+
+	runtime: go112
+
+	env_variables:
+	  GOLANGORG_CHECK_COUNTRY: true
+
+	nobuild_files: views/
+
+* Google App Engine Deploy 
+
+	$ gcloud app deploy
+
+	$ gcloud app browse
