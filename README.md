@@ -5,5 +5,6 @@
 
 * [Online Slide Decks](https://decks.golang-workshop.io)
 * [Source Code](https://github.com/rfinochi/golang-workshop-src)
+* [ToDo Sample Source Code](https://github.com/rfinochi/golang-workshop-todo)
 
 <img src="https://blog.golang.org/gopher/gopher.png" alt="gopher" width="70"/>
