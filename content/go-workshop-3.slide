@@ -58,13 +58,21 @@ Modificar la API Rest del challenge 4.2 para usar Gin.
 
 * Google App Engine Deploy 
 
+Crear un proyecto
+
 	$ gcloud projects create PROJECT_ID
+
+Configurar el proyecto por defecto en nuestro entorno
 
 	$ gcloud config set project PROJECT_ID
 
+Crear una nueva aplicacion en [[https://cloud.google.com/appengine][GAE]]
+
 	$ gcloud app create
 
-* Google App Engine Deploy app.yaml (Service Configuration File)
+* Google App Engine Deploy - Service Configuration File
+
+Agregar un archivo [[https://cloud.google.com/appengine/docs/flexible/go/configuring-your-app-with-app-yaml][app.yaml]]
 
 	runtime: go112
 
@@ -75,6 +83,12 @@ Modificar la API Rest del challenge 4.2 para usar Gin.
 
 * Google App Engine Deploy 
 
+Subir la aplicacion a [[https://cloud.google.com/appengine][GAE]]
+
 	$ gcloud app deploy
 
+Abrir la aplicacion
+
 	$ gcloud app browse
+
+[[https://cloud.google.com/appengine/docs/standard/go112/building-app][* Building a Go App on App Engine]]
