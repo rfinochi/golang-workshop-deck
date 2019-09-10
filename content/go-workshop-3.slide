@@ -92,3 +92,106 @@ Abrir la aplicacion
 	$ gcloud app browse
 
 [[https://cloud.google.com/appengine/docs/standard/go112/building-app][* Building a Go App on App Engine]]
+
+* Programacion funcional
+
+Functional Programming by Wikipedia:
+
+	Functional programming is a programming paradigm that treats computation as the evaluation of mathematical functions and avoids state and mutable data
+	
+En otras palabras la programacion funcional promueve codigo sin cambios en los valores de las variables para evitar efectos no esperados.
+
+Es lo opuesto de la programacion imperativa, que enfatiza los cambios de estado.
+
+* Programacion funcional
+
+Esto quiere decir que:
+
+- La informacion no cambia (no mutable data).
+- No hay estado.
+- Una vez asignado un valor a una variable (value binding), la variable (symbol) no puede cambiar su valor.
+- La salida (output) de una funcion solo depende de los valores de entrada (input).
+
+* Programacion funcional - Ventajas
+
+- *Codigo* *mas* *limpio*: las _variables_ no se modifican una vez que se definene, por lo tanto no tenemos que seguir los cambios de estado por todo el codigo para comprender como funciona el codigo de un programa.
+- *Referential* *transparency*: Las expresiones pueden ser reemplazadas por sus valores. Si llamamos a una funcion con los mismo valores, estamos seguros que el resultado es el mismo (no hay estado en ningun otro codigo del programa que pueda cambiar el resultado).
+
+	No hay razon para lo que Einstein definio como locura:
+	"hacer la misma cosa una y otra vez esperando diferentes resultados"
+
+* Programacion funcional en Golang
+
+Golang es un lenguaje de programacion multi-lenguaje, no es un lenguaje funcional, pero tiene caracteristicas que nos permiten desarrollar codigo que aplique los principios de la programacion funcional.
+
+* Programacion funcional en Golang - Nunca actualizar, siempre crear
+
+*Strings*
+
+Mal
+
+	name := "Juan"
+	name := name + " Carlos"
+
+Bien
+
+	const firstname = "Juan Carlos"
+	const lasname = "Batman"
+	const name = firstname + " " + lastname
+
+* Programacion funcional en Golang - Nunca actualizar, siempre crear
+
+*Arrays*
+
+Mal
+
+	years := [4]int{2001, 2002}
+	years[2] = 2003
+	years[3] = 2004
+	years // [2001, 2002, 2003, 2004]
+
+Bien
+
+	years := [2]int{2001, 2001}
+	allYears := append(years, 2003, [2]int{2004, 2005}
+
+* Programacion funcional en Golang - Nunca actualizar, siempre crear
+
+*Maps*
+
+Mal
+
+	ages := map[string]int{"John": 30}
+	ages["Mary"] = 28
+	ages // {"John": 30, "Mary": 28}
+
+Bien
+
+	ages1 := map[string]int{"John": 30}
+	ages2 := map[string]int{"Mary": 28}
+	func mergeMaps(mapA, mapB map[string]int) map[string]int {
+		allAges := make(map[K]V, len(ages1) + len(ages2))
+		for k, v := range mapA {
+			allAges[k] = v
+		}
+		for k, v := range mapB {
+			allAges[k] = v
+		}
+		return allAges
+	}
+	allAges := mergeMaps(ages1, ages2)
+
+* Programacion funcional en Golang - Higher Order Functions
+
+Las funciones son _first-class_ _objects_ en Golang, si se quiere pasar una funcion a otra funcion, se debe tratar como cualquier otro objeto.
+
+	func caller(f func(string) string) {
+		result := f("Juan")
+		fmt.Println(result)
+	}
+	
+	f := func(s name) string {
+		return "Hola " + name
+	}
+	
+	caller(f)

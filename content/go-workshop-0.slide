@@ -39,8 +39,9 @@ http://lagash.com
 	Concurrency
 	Building a RESTful API
 - Dia 3
-	Error Handling
-	Http Client
 	DB Access
 	Gin Web Framework
-	Bonus Track: Deploy in Google App Engine
+	Http Client
+	Error Handling
+	Bonus Track 1: Deploy in Google App Engine
+	Bonus Track 2: Programacion funcional en Golang

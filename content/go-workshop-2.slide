@@ -81,20 +81,20 @@ Lo mas importante de las interfaces es la cultura detras de ellas, piezas de cod
 		Name string
 		Age  int
 	}
-	rodolfo := new(Person)
+	juan := new(Person)
 
 * Creacion de tipos - Struct Types
 
-	var rodolfo Person
-	rect.Name = "Rodolfo"
+	var juan Person
+	rect.Name = "Juan"
 	rect.Age = 40
 
 * Creacion de tipos - Struct Literal y &
 
 La inicializacion implicita mas el _&_ es equivalente a _new_.
 
-	rodolfo := Person{"Rodolfo", 40}
-	rodolfoPointer := &Person{Name: "Rodolfo", Age: 40}
+	juan := Person{"Juan", 22}
+	juanPointer := &Person{Name: "Juan", Age: 22}
 
 * Challenge 2.1
 
