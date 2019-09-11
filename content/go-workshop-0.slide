@@ -25,23 +25,26 @@ http://lagash.com
 
 .caption [[https://youtu.be/bmZNaUcwBt4][The Why of Go]]
 
-* Agenda
+* Agenda - Dia 1
 
-- Dia 1
-	Introduccion
-	Instalacion
-	Basics
-	Packages
-	Testing
-- Dia 2
-	Structs
-	Interfaces
-	Concurrency
-	Building a RESTful API
-- Dia 3
-	DB Access
-	Gin Web Framework
-	Http Client
-	Error Handling
-	Bonus Track 1: Deploy in Google App Engine
-	Bonus Track 2: Programacion funcional en Golang
+- Introduccion
+- Instalacion
+- Basics
+- Packages
+- Testing
+
+* Agenda - Dia 2
+
+- Structs
+- Interfaces
+- Concurrency
+- Building a RESTful API
+
+* Agenda - Dia 1
+
+- DB Access
+- Gin Web Framework
+- Http Client
+- Error Handling
+- Bonus Track 1: Deploy in Google App Engine
+- Bonus Track 2: Programacion funcional en Golang
