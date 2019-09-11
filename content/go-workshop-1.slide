@@ -246,7 +246,7 @@ Estructura de directorios:
 
 .image ./resources/images/chalenge-accepted.jpg 150 _
 
-Crear una funcion _Reverse_ que devuelva un string pasado por parametro.
+Crear una funcion _Reverse_ que devuelva un string invertido al pasado por parametro.
 
 Hints:
 
