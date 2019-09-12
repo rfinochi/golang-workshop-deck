@@ -281,19 +281,19 @@ Crear un paquete _stringutil_ que contega la funcion _Reverse_ y se utilice en f
 
 .play -edit -numbers ./resources/src/maps.go
 
-* Linea de commandos - Argumentos
+* Linea de comandos - Argumentos
 
 .caption [[https://github.com/rfinochi/golang-workshop-src/tree/master/12-cmdline][Ejercicio 12]]
 
 .code -numbers ./resources/src/cmdline-args.go
 
-* Linea de commandos - Flags
+* Linea de comandos - Flags
 
 .caption [[https://github.com/rfinochi/golang-workshop-src/tree/master/12-cmdline][Ejercicio 12]]
 
 .code -numbers ./resources/src/cmdline-flags.go
 
-* Linea de commandos - Variables de entorno
+* Linea de comandos - Variables de entorno
 
 .caption [[https://github.com/rfinochi/golang-workshop-src/tree/master/12-cmdline][Ejercicio 12]]
 
