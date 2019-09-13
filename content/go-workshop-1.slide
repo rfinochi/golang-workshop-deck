@@ -202,6 +202,10 @@ Comandos basicos desde consola
 - Los directorios son llamados _packages_ en Golang
 - Para importar paquetes se debe indicar el path al directorio que lo contiene
 
+Se pueden importar paquetes desde Git:
+
+	$ go get -u -v github.com/gorilla/mux
+
 Estructura de directorios:
 
 	bin (binarios creados con el comando go install)

@@ -64,6 +64,55 @@ Lo mas importante de las interfaces es la cultura detras de ellas, piezas de cod
 
 [[https://youtu.be/F4wUrj6pmSI][Understanding Go Interfaces]]
 
+* Interfaces values
+
+.caption [[https://github.com/rfinochi/golang-workshop-src/tree/master/15-interfaces/interface-values.go][Ejemplo]]
+
+Los valores de la interfaz pueden considerarse como una tupla de un valor y un tipo concreto, esto se llaman _interface_ _value_:
+
+	(value, type)
+
+- Un _interface_ _value_ contiene un valor de un tipo concreto subyacente especifico.
+- Llamar a un metodo en un _interface_ _value_ ejecuta el metodo del mismo nombre en su tipo subyacente.
+
+* The empty interface
+
+.caption [[https://github.com/rfinochi/golang-workshop-src/tree/master/15-interfaces/empty-interface.go.go][Ejemplo]]
+
+Una interfaz sin metodos se conoce como interfaz vacia:
+
+	interface{}
+
+- Una interfaz vacia puede contener valores de cualquier tipo.
+- Las interfaces vacias se usan en codigo que tiene que trabajar con valores de un tipo desconocido. Por ejemplo, _fmt.Print_ recibe argumentos de tipo _interface{}_.
+
+* Type assertions
+
+.caption [[https://github.com/rfinochi/golang-workshop-src/tree/master/15-interfaces/type-assertions.go][Ejemplo]]
+
+El mecanismo de _type_ _assertion_ provee acceso a los valores concretos de un _interface_ _value_:
+
+	t := i.(T)
+
+La instruccion anterior comprueba que el _interface_ _value_ i contiene el tipo concreto T y asigna el valor a la variable t.
+
+Para comprobar que una interfaz almacena un tipo especifico se usa:
+
+	t, ok := i.(T)
+
+* Type switches
+
+Un _type_ _switch_ es un mecanismo que permite hacer _type_ _assertions_ en serie:
+
+	switch v := i.(type) {
+	case T:
+		// here v has type T
+	case S:
+		// here v has type S
+	default:
+		// no match; here v has the same type as i
+	}
+
 * Creacion de tipos - make
 
 - Funcion built-in que se usa unicamente para alocar e inicializar slices, maps o channels.
@@ -124,7 +173,7 @@ Agregar un nuevo tipo de pasajero 'empleado de aerolinea de ultimo minuto' cuyo 
 
 * Concurrencia - Go-Routines
 
-- Golang provee un mecanismo sencillo para crear un nuevo thread.
+- Golang provee un mecanismo sencillo para crear un nuevo _"thread"_ [[https://medium.com/rungo/achieving-concurrency-in-go-3f84cbf870ca][*]].
 - Se usa el keyword *go* antes de una llamada a una funcion (Go-Routines).
 
 .image ./resources/images/concurrency.png 300 _
@@ -134,7 +183,9 @@ Agregar un nuevo tipo de pasajero 'empleado de aerolinea de ultimo minuto' cuyo 
 - Los Channels son _pipes_ para conectar _goroutines_ concurrentes.
 - Sirven para enviar y recibir valores entre dos _goroutines_.
 
-.image ./resources/images/concurrency-channels.png 350 _
+.image ./resources/images/channels.jpg 100 _
+
+.image ./resources/images/concurrency-channels.png 300 _
 
 * Challenge 3
 
