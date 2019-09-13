@@ -124,43 +124,28 @@ El manejo de excepciones es una de las caracteristicas mas controversiales en Go
 
 All of Rob Pike's [[https://go-proverbs.github.io/][Go Proverbs]]
 
+* HTTP Client
 
-* Google App Engine Deploy 
+.caption [[https://github.com/rfinochi/golang-workshop-src/tree/master/22-http-client][Ejercicio 22]]
 
-Crear un proyecto
+El paquete [[http][https://golang.org/pkg/net/http/]] contiene una implementacion de un cliente http que permite emular las acciones que realiza un web browser.
 
-	$ gcloud projects create PROJECT_ID
+* HTTP Client - GET
 
-Configurar el proyecto por defecto en nuestro entorno
+	resp, _ := http.Get("https://httpbin.org/get")
+	defer resp.Body.Close()
 
-	$ gcloud config set project PROJECT_ID
+	data, _ := ioutil.ReadAll(resp.Body)
+	fmt.Println(string(data))
 
-Crear una nueva aplicacion en [[https://cloud.google.com/appengine][GAE]]
+* HTTP Client - POST
 
-	$ gcloud app create
+	payload := "Hello world!"
+	resp, _ := http.Post("https://httpbin.org/post", "text/plain", strings.NewReader(payload))
+	defer resp.Body.Close()
 
-* Google App Engine Deploy - Service Configuration File
-
-Agregar un archivo [[https://cloud.google.com/appengine/docs/flexible/go/configuring-your-app-with-app-yaml][app.yaml]]
-
-	runtime: go112
-
-	env_variables:
-	  GOLANGORG_CHECK_COUNTRY: true
-
-	nobuild_files: views/
-
-* Google App Engine Deploy 
-
-Subir la aplicacion a [[https://cloud.google.com/appengine][GAE]]
-
-	$ gcloud app deploy
-
-Abrir la aplicacion
-
-	$ gcloud app browse
-
-[[https://cloud.google.com/appengine/docs/standard/go112/building-app][* Building a Go App on App Engine]]
+	data, _ := ioutil.ReadAll(resp.Body)
+	fmt.Println(string(data))
 
 * Programacion funcional
 
@@ -286,3 +271,79 @@ Tener *higher* *order* *functions* habilita el *currying*, que es la posibilidad
 		plus_one := partialPlus(1)
 		fmt.Println(plus_one(5)) //prints 6
 	}
+
+* Google App Engine Deploy 
+
+Crear un proyecto
+
+	$ gcloud projects create PROJECT_ID
+
+Configurar el proyecto por defecto en nuestro entorno
+
+	$ gcloud config set project PROJECT_ID
+
+Crear una nueva aplicacion en [[https://cloud.google.com/appengine][GAE]]
+
+	$ gcloud app create
+
+* Google App Engine Deploy - Service Configuration File
+
+Agregar un archivo [[https://cloud.google.com/appengine/docs/flexible/go/configuring-your-app-with-app-yaml][app.yaml]]
+
+	runtime: go112
+
+	env_variables:
+	  GOLANGORG_CHECK_COUNTRY: true
+
+	nobuild_files: views/
+
+* Google App Engine Deploy 
+
+Subir la aplicacion a [[https://cloud.google.com/appengine][GAE]]
+
+	$ gcloud app deploy
+
+Abrir la aplicacion
+
+	$ gcloud app browse
+
+[[https://cloud.google.com/appengine/docs/standard/go112/building-app][* Building a Go App on App Engine]]
+
+* Azure Deploy
+
+- Crear un nuevo Web Site en el portal de Azure
+- Instalar Go via la consola
+
+    $ curl -O https://storage.googleapis.com/golang/go1.13.windows-386.zip
+    $ unzip go1.13.windows-386.zip
+
+    Comprobar la ultima version en https://golang.org/dl
+    No preocuparse si aparece el error Bad Request
+
+- Copiar nuestro codigo en el Web Site
+- Crear un Web.Config con la siguiente configuracion
+- La variable de entorno que especifica el port es:
+
+	http.ListenAndServe(":"+os.Getenv("HTTP\_PLATFORM\_PORT"), nil)
+
+: http://www.wadewegner.com/2014/12/4-simple-steps-to-run-go-language-in-azure-websites/
+
+* Azure Deploy
+
+	<?xml version="1.0" encoding="UTF-8"?>
+	<configuration>
+	    <system.webServer>
+	<handlers>
+	    <add name="httpplatformhandler" path="*" verb="*" 
+		modules="httpPlatformHandler" 
+		resourceType="Unspecified" />
+	</handlers>
+	<httpPlatform processPath="d:\home\site\wwwroot\go\bin\go.exe" 
+	      arguments="run d:\home\site\wwwroot\server.go" 
+	      startupTimeLimit="60">
+	    <environmentVariables>
+	      <environmentVariable name="GOROOT" value="d:\home\site\wwwroot\go" />
+	    </environmentVariables>
+	</httpPlatform>
+	    </system.webServer>
+	</configuration>
