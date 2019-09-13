@@ -321,10 +321,9 @@ Abrir la aplicacion
     No preocuparse si aparece el error Bad Request
 
 - Copiar nuestro codigo en el Web Site
-- Crear un Web.Config con la siguiente configuracion
 - La variable de entorno que especifica el port es:
-
-	http.ListenAndServe(":"+os.Getenv("HTTP\_PLATFORM\_PORT"), nil)
+	http.ListenAndServe(":"+os.Getenv("HTTP_PLATFORM_PORT"), nil)
+- Crear un Web.config con la siguiente configuracion (next slide)
 
 : http://www.wadewegner.com/2014/12/4-simple-steps-to-run-go-language-in-azure-websites/
 
