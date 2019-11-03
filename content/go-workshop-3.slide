@@ -151,7 +151,8 @@ El paquete [[http][https://golang.org/pkg/net/http/]] contiene una implementacio
 
 Functional Programming by Wikipedia:
 
-	Functional programming is a programming paradigm that treats computation as the evaluation of mathematical functions and avoids state and mutable data
+	Functional programming is a programming paradigm that treats computation 
+	as the evaluation of mathematical functions and avoids state and mutable data
 	
 En otras palabras la programacion funcional promueve codigo sin cambios en los valores de las variables para evitar efectos no esperados.
 

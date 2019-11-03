@@ -332,12 +332,12 @@ Cambiar el programa para que el parametro string de la funcion _Reverse_ se obte
 
 Se puede controlar el code coverage con el comando:
 
-	go test -cover
+	$ go test -cover
 
 Se pueden exportar los resultados y verlos en html con:
 
-	go test -coverprofile=coverage.out
-	go tool cover -html=coverage.out
+	$ go test -coverprofile=coverage.out
+	$ go tool cover -html=coverage.out
 
 
 * Testing - Benchmark
@@ -359,7 +359,7 @@ Un benchmark se ejecuta con el comando *go* *test* *-bench=.* (el parametro _ben
 
 El resultado es:
 
-	% go test -bench=.
+	$ go test -bench=.
 	PASS
 	BenchmarkFibonacci   5000000               509 ns/op
 	ok      github.com/rfinochi/golang-workshop       3.084s
