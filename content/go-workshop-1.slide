@@ -318,17 +318,17 @@ Cambiar el programa para que el parametro string de la funcion _Reverse_ se obte
 - Se encuentra en el paquete _testing_.
 - Todo archivo Go con el sujifo *_test.go* es considerado un test suite en Golang.
 - En cada test suite podemos correr:
-	Tests
+	Unit Tests
 	Benchmarks
 	Examples
 
-* Testing
+* Testing - Unit Test
 
 .caption [[https://github.com/rfinochi/golang-workshop-src/tree/master/13-testing][Ejercicio 13]]
 
 .code -numbers ./resources/src/test.go
 
-- Cada funcion TestXxxx en un test suite es un test.
+- Cada funcion TestXxxx en un test suite es un unit test.
 - El comando *go* *test* corre los test del proyecto.
 
 * Testing - Code Coverage
@@ -391,4 +391,4 @@ Un loop es un operacion crucial en un benchmark, *cuidado!*
 
 .image ./resources/images/chalenge-accepted.jpg 150 _
 
-Crear un _test_, un _benchmark_, y un _example_ para la funcion _Reverse_.
+Crear un _unit_ _test_, un _benchmark_, y un _example_ para la funcion _Reverse_.
