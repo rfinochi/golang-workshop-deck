@@ -11,26 +11,17 @@ http://lagash.com
 * Most popular languages
 
 .image ./resources/images/most_popular_languages.jpg 430 _
-.caption [[https://insights.stackoverflow.com/survey/2018][Stack Overflow Developer Survey 2018]]
+.caption [[https://insights.stackoverflow.com/survey/2019][Stack Overflow Developer Survey 2019]]
 
 "The street finds its own uses for things."
 Burning Chrome, William Gibson
 
-* Most popular (programming) languages
-
-.image ./resources/images/most_popular_programming_languages.jpg 500 _
-
-.caption [[https://insights.stackoverflow.com/survey/2018][Stack Overflow Developer Survey 2018]]
-
-* Most loved languages
-
-.image ./resources/images/most_loved_languages.jpg 500 _
-.caption [[https://insights.stackoverflow.com/survey/2018][Stack Overflow Developer Survey 2018]]
-
 * Por que otro lenguaje de programacion?
 
-- Programar _software_ _de_ _sistema_ es dificil
+- Programar _software_ es dificil
 	Las computadoras tiene muchos nucleos
+	Los sistemas estan mas distribuidos
+	Los usuarios son mucho mas exigentes
 - Hoy en dia un lenguaje de programacion es mas que solo un compilador
 	Manejo de librerias y dependencias
 	Velocidad para compilar
@@ -62,9 +53,15 @@ Burning Chrome, William Gibson
 	all three were not available in the same mainstream language.
 
 - Arranca como proyecto en 2007 dentro de Google. Goals: eliminar la *lentitud* y la *torpeza* a la hora de desarrollar software en Google.
-- Anunciado al mundo en 2009, en 2012 se estabiliza la API con la version 1.0 . La version actual es la 1.12.x, siguiendo su promesa de [[https://golang.org/doc/go1compat][compatibilidad]].
+- Anunciado al mundo en 2009, en 2012 se estabiliza la API con la version 1.0 . La version actual es la 1.13.x, siguiendo su promesa de [[https://golang.org/doc/go1compat][compatibilidad]].
 - Es necesario que los desarrolladores puedan ser *productivos* *muy* *rapidamente* con lenguajes y herramientas _serias_.
 - El lenguaje fue pensado por y para personas que escriben, leen y debuggean grandes piezas de software.
+
+* Otra razon - $$$ - :)
+
+.image ./resources/images/top_paying_technologies.jpg 500 _
+.caption [[https://insights.stackoverflow.com/survey/2019][Stack Overflow Developer Survey 2019]]
+
 
 * Premisas
 
@@ -146,11 +143,17 @@ Comandos basicos desde consola
 
 .play -edit -numbers ./resources/src/operators.go
 
-* Funciones
+* Funciones - Multiples Valores de Retorno - Blank Identifier
 
 .caption [[https://github.com/rfinochi/golang-workshop-src/tree/master/06-functions][Ejercicio 6]]
 
-.play -edit -numbers ./resources/src/functions.go
+.play -edit -numbers ./resources/src/functions_1.go
+
+* Funciones - Named Return Values
+
+.caption [[https://github.com/rfinochi/golang-workshop-src/tree/master/06-functions][Ejercicio 6]]
+
+.code -edit -numbers ./resources/src/functions_2.go
 
 * Instrucciones de control - if
 
