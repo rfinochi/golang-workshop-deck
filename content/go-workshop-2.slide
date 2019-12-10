@@ -28,8 +28,6 @@ Golang favorece la composicion por sobre la herencia:
 
 .caption [[https://github.com/rfinochi/golang-workshop-src/tree/master/14-structs][Ejercicio 14]]
 
-[[http://blog.ralch.com/tutorial/design-patterns/golang-composite/][Composition Design Pattern]]
-
 .code ./resources/src/structs-nested.go
 
 * Structs - Metodos
@@ -46,6 +44,14 @@ Golang favorece la composicion por sobre la herencia:
 - *** se usa como prefijo para definir un puntero para de un tipo dado.
 
 .code ./resources/src/structs-pointers.go
+
+* Structs compuestos
+
+.caption [[https://github.com/rfinochi/golang-workshop-src/tree/master/14-structs][Ejercicio 14]]
+
+[[http://blog.ralch.com/tutorial/design-patterns/golang-composite/][Composition Design Pattern]]
+
+.code ./resources/src/structs-composed.go
 
 * Interfaces
 
