@@ -9,5 +9,5 @@ type GuideDog struct {
 }
 
 func (gd *GuideDog) Help(h *Human) {
-	fmt.Printf("Hey human, grab %s’s leash!\n", gd.Name())
+	fmt.Printf("Please help me (%s)", gd.Name())
 }

@@ -34,6 +34,8 @@ Golang favorece la composicion por sobre la herencia:
 
 .caption [[https://github.com/rfinochi/golang-workshop-src/tree/master/14-structs][Ejercicio 14]]
 
+Un metodo no es mas que una funcion con un argumento receptor especial
+
 .code ./resources/src/structs-methods.go
 
 * Punteros
