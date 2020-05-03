@@ -7,6 +7,8 @@
 [![Uptime Robot ratio (30 days)](https://img.shields.io/uptimerobot/ratio/m783326337-351b881e251837d34da4cfa1?style=plastic)](https://status.golang-workshop.io)
 [![License](https://img.shields.io/github/license/rfinochi/golang-workshop-decks?style=plastic)](https://opensource.org/licenses/mit-license.php)
 
+## Go Programming Language Workshop Resources
+
 * [Online Slide Decks](https://decks.golang-workshop.io)
 * [Source Code](https://github.com/rfinochi/golang-workshop-src)
 * [To-Do Sample Web API Source Code](https://github.com/rfinochi/golang-workshop-todo)
