@@ -53,7 +53,7 @@ Burning Chrome, William Gibson
 	all three were not available in the same mainstream language.
 
 - Arranca como proyecto en 2007 dentro de Google. Goals: eliminar la *lentitud* y la *torpeza* a la hora de desarrollar software en Google.
-- Anunciado al mundo en 2009, en 2012 se estabiliza la API con la version 1.0 . La version actual es la 1.14.x, siguiendo su promesa de [[https://golang.org/doc/go1compat][compatibilidad]].
+- Anunciado al mundo en 2009, en 2012 se estabiliza la API con la version 1.0 . La version actual es la 1.15.x, siguiendo su promesa de [[https://golang.org/doc/go1compat][compatibilidad]].
 - Es necesario que los desarrolladores puedan ser *productivos* *muy* *rapidamente* con lenguajes y herramientas _serias_.
 - El lenguaje fue pensado por y para personas que escriben, leen y debuggean grandes piezas de software.
 
