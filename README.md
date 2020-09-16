@@ -1,6 +1,6 @@
 # Go Programming Language Workshop Slide Decks
 
-[![Build status](https://img.shields.io/travis/rfinochi/golang-workshop-decks?style=plastic&logo=travis)](https://travis-ci.org/rfinochi/golang-workshop-decks)
+[![Build status](https://img.shields.io/travis/com/rfinochi/golang-workshop-decks?style=plastic&logo=travis)](https://travis-ci.com/rfinochi/golang-workshop-decks)
 ![GitHub go.mod Go version](https://img.shields.io/github/go-mod/go-version/rfinochi/golang-workshop-decks?style=plastic)
 [![GitHub issues](https://img.shields.io/github/issues/rfinochi/golang-workshop-decks?style=plastic)](https://github.com/rfinochi/golang-workshop-decks/issues)
 ![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/rfinochi/golang-workshop-decks?style=plastic)
