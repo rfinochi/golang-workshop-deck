@@ -3,9 +3,7 @@ https://golang-workshop.io
 Tags: golang
 
 Rodolfo Finochietti
-Chief Delivery Officer, Lagash
-rodolfof@lagash.com
-http://lagash.com
+https://rodolfofinochietti.me
 @rodolfof
 
 * Structs
@@ -124,7 +122,7 @@ Un _type_ _switch_ es un mecanismo que permite hacer _type_ _assertions_ en seri
 * Creacion de tipos - make
 
 - Funcion built-in que se usa unicamente para alocar e inicializar slices, maps o channels.
-- Se indica el tipo, el tamaño y la capacidad.
+- Se indica el tipo, el tamaï¿½o y la capacidad.
 - Como resultado obtenemos la variable en si, no un puntero.
 
 	slice := make([]int, 0, 10)
