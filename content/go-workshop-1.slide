@@ -6,6 +6,9 @@ Rodolfo Finochietti
 [[https://rodolfofinochietti.me]]
 @rodolfof
 
+Mariano Sánchez
+@marianosz
+
 * Most popular languages
 
 .image ./resources/images/most_popular_languages.jpg 430 _
@@ -183,6 +186,12 @@ Comandos basicos desde consola
 
 .play -edit -numbers ./resources/src/for-printTower.go
 
+* Instrucciones de control - for range
+
+.caption [[https://github.com/rfinochi/golang-workshop-src/tree/master/07-control-statments][Ejercicio 7]]
+
+.play -edit -numbers ./resources/src/for-range.go
+
 * Instrucciones de control - switch
 
 .caption [[https://github.com/rfinochi/golang-workshop-src/tree/master/07-control-statments][Ejercicio 7]]
@@ -190,10 +199,6 @@ Comandos basicos desde consola
 .play -edit -numbers ./resources/src/switch.go
 
 .caption [[https://developer.chrome.com/native-client][*nacl]]
-
-* Review time
-
-.image ./resources/images/review-time.png 500 _
 
 * Packages
 
@@ -247,6 +252,16 @@ Estructura de directorios:
 
 .play -edit -numbers ./resources/src/arrays-slices.go
 
+* Maps
+
+.caption [[https://github.com/rfinochi/golang-workshop-src/tree/master/10-maps][Ejercicio 10]]
+
+.play -edit -numbers ./resources/src/maps.go
+
+* Review time
+
+.image ./resources/images/review-time.png 500 _
+
 * Challenge 1.1
 
 .image ./resources/images/chalenge-accepted.jpg 150 _
@@ -273,120 +288,3 @@ Modificar la funcion _Reverse_ para invertir el _casing_ de las vocales (solamen
 .image ./resources/images/chalenge-accepted.jpg 150 _
 
 Crear un paquete _stringutil_ que contega la funcion _Reverse_ y se utilice en funcion la _main_.
-
-* Archivos
-
-.caption [[https://github.com/rfinochi/golang-workshop-src/tree/master/10-files][Ejercicio 10]]
-
-.code -numbers ./resources/src/files.go
-
-* Maps
-
-.caption [[https://github.com/rfinochi/golang-workshop-src/tree/master/11-maps][Ejercicio 11]]
-
-.play -edit -numbers ./resources/src/maps.go
-
-* Linea de comandos - Argumentos
-
-.caption [[https://github.com/rfinochi/golang-workshop-src/tree/master/12-cmdline][Ejercicio 12]]
-
-.code -numbers ./resources/src/cmdline-args.go
-
-* Linea de comandos - Flags
-
-.caption [[https://github.com/rfinochi/golang-workshop-src/tree/master/12-cmdline][Ejercicio 12]]
-
-.code -numbers ./resources/src/cmdline-flags.go
-
-* Linea de comandos - Variables de entorno
-
-.caption [[https://github.com/rfinochi/golang-workshop-src/tree/master/12-cmdline][Ejercicio 12]]
-
-.code -numbers ./resources/src/cmdline-env.go
-
-* Challenge 1.4 (Opcional)
-
-.image ./resources/images/chalenge-accepted.jpg 150 _
-
-Cambiar el programa para que el parametro string de la funcion _Reverse_ se obtenga desde la linea de comandos con un flag llamado _text_.
-
-* Testing
-
-- Golang posee un framework de testing incluido en la standard library.
-- Se encuentra en el paquete _testing_.
-- Todo archivo Go con el sujifo *_test.go* es considerado un test suite en Golang.
-- En cada test suite podemos correr:
-	Unit Tests
-	Benchmarks
-	Examples
-
-* Testing - Unit Test
-
-.caption [[https://github.com/rfinochi/golang-workshop-src/tree/master/13-testing][Ejercicio 13]]
-
-.code -numbers ./resources/src/test.go
-
-- Cada funcion TestXxxx en un test suite es un unit test.
-- El comando *go* *test* corre los test del proyecto.
-
-* Testing - Code Coverage
-
-Se puede controlar el code coverage con el comando:
-
-	$ go test -cover
-
-Se pueden exportar los resultados y verlos en html con:
-
-	$ go test -coverprofile=coverage.out
-	$ go tool cover -html=coverage.out
-
-
-* Testing - Benchmark
-
-.caption [[https://github.com/rfinochi/golang-workshop-src/tree/master/13-testing][Ejercicio 13]]
-
-.code -numbers ./resources/src/test-benchmark.go
-
-- Cada funcion BenchmarkXxxx es un benchmark.
-- Un Benchmark no es un test.
-- Las funciones de benchmark son ejecutadas muchas veces por el framework de test.
-- El valor *b.N* se incrementa hasta que el framework el test esta safisfecho de la estabilidad del benchmark.
-
-* Testing - Benchmark
-
-.caption [[https://github.com/rfinochi/golang-workshop-src/tree/master/13-testing][Ejercicio 13]]
-
-Un benchmark se ejecuta con el comando *go* *test* *-bench=.* (el parametro _bench_ es _regex_ para indicar cuales benchmarks queremos correr).
-
-El resultado es:
-
-	$ go test -bench=.
-	PASS
-	BenchmarkFibonacci   5000000               509 ns/op
-	ok      github.com/rfinochi/golang-workshop       3.084s
-
-La segunda linea indica el valor final de *b.N* y el tiempo promedio de ejecucion en nanosegundos/operacion.
-
-* Testing - Benchmark
-
-.caption [[https://github.com/rfinochi/golang-workshop-src/tree/master/13-testing][Ejercicio 13]]
-
-.code -numbers ./resources/src/test-benchmark-wrong.go
-
-Un loop es un operacion crucial en un benchmark, *cuidado!*
-
-* Testing - Example
-
-.caption [[https://github.com/rfinochi/golang-workshop-src/tree/master/13-testing][Ejercicio 13]]
-
-.code -numbers ./resources/src/test-example.go
-
-- Los _examples_ son snippets de codigo Golang que se muestran como parte de la documentacion.
-- Estan verificados por que tambien se corren como tests. 
-- Tambien se pueden ejecutar por el usuario al leer la documentacion web generada con la herramienta _godoc_ (el usuario dispone de un boton _Run_ _Test_).
-
-* Challenge 1.5
-
-.image ./resources/images/chalenge-accepted.jpg 150 _
-
-Crear un _unit_ _test_, un _benchmark_, y un _example_ para la funcion _Reverse_.
