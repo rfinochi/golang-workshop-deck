@@ -57,7 +57,6 @@ Se pueden exportar los resultados y verlos en html con:
 	$ go test -coverprofile=coverage.out
 	$ go tool cover -html=coverage.out
 
-
 * Testing - Benchmark
 
 .caption [[https://github.com/rfinochi/golang-workshop-src/tree/master/12-testing][Ejercicio 12]]
