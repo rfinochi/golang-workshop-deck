@@ -6,6 +6,9 @@ Rodolfo Finochietti
 [[https://rodolfofinochietti.me]]
 @rodolfof
 
+Mariano Sánchez
+@marianosz
+
 * Most popular languages
 
 .image ./resources/images/most_popular_languages.jpg 430 _
@@ -251,7 +254,7 @@ Estructura de directorios:
 
 * Maps
 
-.caption [[https://github.com/rfinochi/golang-workshop-src/tree/master/11-maps][Ejercicio 11]]
+.caption [[https://github.com/rfinochi/golang-workshop-src/tree/master/10-maps][Ejercicio 10]]
 
 .play -edit -numbers ./resources/src/maps.go
 

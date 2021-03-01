@@ -6,9 +6,117 @@ Rodolfo Finochietti
 [[https://rodolfofinochietti.me]]
 @rodolfof
 
+Mariano Sánchez
+@marianosz
+
+* Linea de comandos - Argumentos
+
+.caption [[https://github.com/rfinochi/golang-workshop-src/tree/master/11-cmdline][Ejercicio 11]]
+
+.code -numbers ./resources/src/cmdline-args.go
+
+* Linea de comandos - Flags
+
+.caption [[https://github.com/rfinochi/golang-workshop-src/tree/master/11-cmdline][Ejercicio 11]]
+
+.code -numbers ./resources/src/cmdline-flags.go
+
+* Linea de comandos - Variables de entorno
+
+.caption [[https://github.com/rfinochi/golang-workshop-src/tree/master/11-cmdline][Ejercicio 11]]
+
+.code -numbers ./resources/src/cmdline-env.go
+
+* Testing
+
+- Golang posee un framework de testing incluido en la standard library.
+- Se encuentra en el paquete _testing_.
+- Todo archivo Go con el sujifo *_test.go* es considerado un test suite en Golang.
+- En cada test suite podemos correr:
+	Unit Tests
+	Benchmarks
+	Examples
+
+* Testing - Unit Test
+
+.caption [[https://github.com/rfinochi/golang-workshop-src/tree/master/12-testing][Ejercicio 12]]
+
+.code -numbers ./resources/src/test.go
+
+- Cada funcion TestXxxx en un test suite es un unit test.
+- El comando *go* *test* corre los test del proyecto.
+
+* Testing - Code Coverage
+
+Se puede controlar el code coverage con el comando:
+
+	$ go test -cover
+
+Se pueden exportar los resultados y verlos en html con:
+
+	$ go test -coverprofile=coverage.out
+	$ go tool cover -html=coverage.out
+
+
+* Testing - Benchmark
+
+.caption [[https://github.com/rfinochi/golang-workshop-src/tree/master/12-testing][Ejercicio 12]]
+
+.code -numbers ./resources/src/test-benchmark.go
+
+- Cada funcion BenchmarkXxxx es un benchmark.
+- Un Benchmark no es un test.
+- Las funciones de benchmark son ejecutadas muchas veces por el framework de test.
+- El valor *b.N* se incrementa hasta que el framework el test esta safisfecho de la estabilidad del benchmark.
+
+* Testing - Benchmark
+
+.caption [[https://github.com/rfinochi/golang-workshop-src/tree/master/12-testing][Ejercicio 12]]
+
+Un benchmark se ejecuta con el comando *go* *test* *-bench=.* (el parametro _bench_ es _regex_ para indicar cuales benchmarks queremos correr).
+
+El resultado es:
+
+	$ go test -bench=.
+	PASS
+	BenchmarkFibonacci   5000000               509 ns/op
+	ok      github.com/rfinochi/golang-workshop       3.084s
+
+La segunda linea indica el valor final de *b.N* y el tiempo promedio de ejecucion en nanosegundos/operacion.
+
+* Testing - Benchmark
+
+.caption [[https://github.com/rfinochi/golang-workshop-src/tree/master/12-testing][Ejercicio 12]]
+
+.code -numbers ./resources/src/test-benchmark-wrong.go
+
+Un loop es un operacion crucial en un benchmark, *cuidado!*
+
+* Testing - Example
+
+.caption [[https://github.com/rfinochi/golang-workshop-src/tree/master/12-testing][Ejercicio 12]]
+
+.code -numbers ./resources/src/test-example.go
+
+- Los _examples_ son snippets de codigo Golang que se muestran como parte de la documentacion.
+- Estan verificados por que tambien se corren como tests. 
+- Tambien se pueden ejecutar por el usuario al leer la documentacion web generada con la herramienta _godoc_ (el usuario dispone de un boton _Run_ _Test_).
+
+* Challenge 2.1
+
+.image ./resources/images/chalenge-accepted.jpg 150 _
+
+Cambiar el programa para que el parametro string de la funcion _Reverse_ se obtenga desde la linea de comandos con un flag llamado _text_.
+
+* Challenge 2.2
+
+.image ./resources/images/chalenge-accepted.jpg 150 _
+
+Crear un _unit_ _test_, un _benchmark_, y un _example_ para la funcion _Reverse_.
+
 * Structs
 
-.caption [[https://github.com/rfinochi/golang-workshop-src/tree/master/14-structs][Ejercicio 14]]
+.caption [[https://github.com/rfinochi/golang-workshop-src/tree/master/13-structs][Ejercicio 13]]
 
 - Coleccion de campos tipados.
 - Pueden contener metodos.
@@ -24,13 +132,13 @@ Golang favorece la composicion por sobre la herencia:
 
 * Structs anidados
 
-.caption [[https://github.com/rfinochi/golang-workshop-src/tree/master/14-structs][Ejercicio 14]]
+.caption [[https://github.com/rfinochi/golang-workshop-src/tree/master/13-structs][Ejercicio 13]]
 
 .code ./resources/src/structs-nested.go
 
 * Structs - Metodos
 
-.caption [[https://github.com/rfinochi/golang-workshop-src/tree/master/14-structs][Ejercicio 14]]
+.caption [[https://github.com/rfinochi/golang-workshop-src/tree/master/13-structs][Ejercicio 13]]
 
 Un metodo no es mas que una funcion con un argumento receptor especial
 
@@ -38,7 +146,7 @@ Un metodo no es mas que una funcion con un argumento receptor especial
 
 * Punteros
 
-.caption [[https://github.com/rfinochi/golang-workshop-src/tree/master/14-structs][Ejercicio 14]]
+.caption [[https://github.com/rfinochi/golang-workshop-src/tree/master/13-structs][Ejercicio 13]]
 
 - Golang soporta punteros para actualizar valores pero no admite aritmetica de punteros como en C. 
 - *** se usa como prefijo para definir un puntero para de un tipo dado.
@@ -47,7 +155,7 @@ Un metodo no es mas que una funcion con un argumento receptor especial
 
 * Structs compuestos
 
-.caption [[https://github.com/rfinochi/golang-workshop-src/tree/master/14-structs][Ejercicio 14]]
+.caption [[https://github.com/rfinochi/golang-workshop-src/tree/master/13-structs][Ejercicio 13]]
 
 [[http://blog.ralch.com/tutorial/design-patterns/golang-composite/][Composition Design Pattern]]
 
@@ -55,7 +163,7 @@ Un metodo no es mas que una funcion con un argumento receptor especial
 
 * Interfaces
 
-.caption [[https://github.com/rfinochi/golang-workshop-src/tree/master/15-interfaces][Ejercicio 15]]
+.caption [[https://github.com/rfinochi/golang-workshop-src/tree/master/14-interfaces][Ejercicio 14]]
 
 - El feature mas importante del lenguaje segun Rob Pike.
 - Extensamente usadas en la standard library.
@@ -72,7 +180,7 @@ Lo mas importante de las interfaces es la cultura detras de ellas, piezas de cod
 
 * Interfaces values
 
-.caption [[https://github.com/rfinochi/golang-workshop-src/tree/master/15-interfaces/interface-values.go][Ejemplo]]
+.caption [[https://github.com/rfinochi/golang-workshop-src/tree/master/14-interfaces/interface-values.go][Ejemplo]]
 
 Los valores de la interfaz pueden considerarse como una tupla de un valor y un tipo concreto, esto se llaman _interface_ _value_:
 
@@ -83,7 +191,7 @@ Los valores de la interfaz pueden considerarse como una tupla de un valor y un t
 
 * The empty interface
 
-.caption [[https://github.com/rfinochi/golang-workshop-src/tree/master/15-interfaces/empty-interface.go.go][Ejemplo]]
+.caption [[https://github.com/rfinochi/golang-workshop-src/tree/master/14-interfaces/empty-interface.go.go][Ejemplo]]
 
 Una interfaz sin metodos se conoce como interfaz vacia:
 
@@ -94,7 +202,7 @@ Una interfaz sin metodos se conoce como interfaz vacia:
 
 * Type assertions
 
-.caption [[https://github.com/rfinochi/golang-workshop-src/tree/master/15-interfaces/type-assertions.go][Ejemplo]]
+.caption [[https://github.com/rfinochi/golang-workshop-src/tree/master/14-interfaces/type-assertions.go][Ejemplo]]
 
 El mecanismo de _type_ _assertion_ provee acceso a los valores concretos de un _interface_ _value_:
 
@@ -151,7 +259,75 @@ La inicializacion implicita mas el _&_ es equivalente a _new_.
 	juan := Person{"Juan", 22}
 	juanPointer := &Person{Name: "Juan", Age: 22}
 
-* Challenge 2.1
+* Error Handling
+
+El manejo de excepciones es una de las caracteristicas mas controversiales en Golang.
+
+.image ./resources/images/error-handling.jpg 450 _
+
+* Error Handling
+
+- Los errores en Golang *no* *son* excepciones.
+- Por convencion, si una funcion puede fallar deber retornar un tipo _error_.
+- El tipo _error_ contiene la infomacion del problema.
+- Si es _nil_ quiere decir que no hubo errores
+
+	func calculate(a, b int) (int, error) { }
+
+	result, err := caculate(a, b)
+	if err != nil {
+		// handle the error
+	}
+	// continue
+
+: https://medium.com/gett-engineering/error-handling-in-go-53b8a7112d04
+
+* Defer
+
+- Una declaracion _defer_ guarda la llamada a la funcion en una lista.
+- La lista de llamadas guardadas se ejecuta despues de que la funcion circundante termina.
+- _defer_ se usa comunmente para simplificar acciones de limpieza.
+
+	func CopyFile(dstName, srcName string) (written int64, err error) {
+		src, err := os.Open(srcName)
+		if err != nil {
+			return
+		}
+		defer src.Close()
+
+		dst, err := os.Create(dstName)
+		if err != nil {
+			return
+		}
+		defer dst.Close()
+
+		return io.Copy(dst, src)
+	}
+
+: https://blog.golang.org/defer-panic-and-recover
+
+* Panic y Recover
+
+- *panic* que detiene el flujo de control ordinario y comienza un proceso de panico (_panicking_).
+- Cuando la funcion F llama a _panic_, la ejecucion de F se detiene, las funciones diferidas en F se ejecutan normalmente y luego F vuelve a su llamador. 
+- Para el llamador, F se comporta como una llamada al panico, y vuelve a su llamador
+- El proceso continua hasta que todas las funciones retornan, momento en el cual el programa falla.
+- *recover* recupera el control de una funcion en panico. 
+- La recuperacion solo es util dentro de las funciones diferidas.
+- Durante la ejecucion normal, una llamada a recuperar devolvera nulo y no tendra otro efecto. 
+- Si la funcion actual esta en panico, una llamada a recuperar capturara el valor que se especifico al crear el panico y reanudara la ejecucion normal.
+
+* Panic y Recover
+
+.caption [[https://github.com/rfinochi/golang-workshop-src/tree/master/15-defer-panic-recover/main.go][Ejemplo]]
+
+- "Errors are values."
+- "Don't just check errors, handle them gracefully."
+- "Don't panic."
+
+All of Rob Pike's [[https://go-proverbs.github.io/][Go Proverbs]]
+
+* Challenge 2.3
 
 .image ./resources/images/chalenge-accepted.jpg 150 _
 
@@ -165,77 +341,14 @@ Existen 3 tipos de pasajeros:
 - De ultimo minuto: Paga el 50% del precio base.
 - Empleado de la aerolinea: No paga el ticket.
 
-* Challenge 2.2 (Opcional)
+* Challenge 2.4
 
 .image ./resources/images/chalenge-accepted.jpg 150 _
 
 Crear un _test_ para verificar el codigo creado en el challenge 2.1 anterior.
 
-* Challenge 2.3
+* Challenge 2.5
 
 .image ./resources/images/chalenge-accepted.jpg 150 _
 
 Agregar un nuevo tipo de pasajero 'empleado de aerolinea de ultimo minuto' cuyo descuento sea la suma de los descuentos de los tipos de pasajero 'empleado de aerolinea' y 'ultimo minuto'.
-
-* Concurrencia - Go-Routines
-
-- Golang provee un mecanismo sencillo para crear un nuevo _"thread"_ [[https://medium.com/rungo/achieving-concurrency-in-go-3f84cbf870ca][*]].
-- Se usa el keyword *go* antes de una llamada a una funcion (Go-Routines).
-
-.image ./resources/images/concurrency.png 300 _
-
-* Concurrencia - Channels
-
-- Los Channels son _pipes_ para conectar _goroutines_ concurrentes.
-- Sirven para enviar y recibir valores entre dos _goroutines_.
-
-.image ./resources/images/channels.jpg 100 _
-
-.image ./resources/images/concurrency-channels.png 300 _
-
-* Challenge 3
-
-.image ./resources/images/chalenge-accepted.jpg 150 _
-
-.caption [[https://github.com/rfinochi/golang-workshop-src/tree/master/challenge3][Instrucciones del challenge 3]]
-
-* Programando una API REST - HTTP Router
-
-- Para crear una API REST vamos a usar el paquete [[http://www.gorillatoolkit.org/pkg/mux][gorilla/mux]].
-- _gorilla/mux_ implementa un router para asociar _requests_ con _handlers_ (funciones Golang).
-
-Se instala con:
-
-	$ go get -u github.com/gorilla/mux
-
-* Programando una API REST - HTTP Router
-
-.caption [[https://github.com/rfinochi/golang-workshop-src/tree/master/18-rest-api][Ejercicio 18]]
-
-.code ./resources/src/rest-api.go
-
-* Programando una API REST - JSON Encoding
-
-.caption [[https://github.com/rfinochi/golang-workshop-src/tree/master/18-rest-api][Ejercicio 18]]
-
-- Para trabajar JSON vamos a usar el paquete [[https://golang.org/pkg/encoding/json/][encoding/json]].
-- Se utilizan las funciones *Marshal* y *Encode*.
-
-* Programando una API REST - JSON Encoding
-
-.play -edit -numbers ./resources/src/rest-api-json.go
-
-* Challenge 4
-
-.image ./resources/images/chalenge-accepted.jpg 150 _
-
-Crear una API REST para una aplicacion de recordatorios (To-Do) que contenga todas las funciones [[https://en.wikipedia.org/wiki/Create,_read,_update_and_delete][CRUD]] para la siguiente entidad:
-
-	ID     int
-	Title  string
-	IsDone bool
-
-Hints:
-
-- Los datos se pueden almacenar en un arreglo.
-- La funcion *strconv.Atoi* del paquete *[[https://golang.org/pkg/strconv/][strconv]]* permite convertir un string a un integer.

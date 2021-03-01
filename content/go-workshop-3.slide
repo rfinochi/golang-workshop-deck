@@ -6,6 +6,82 @@ Rodolfo Finochietti
 [[https://rodolfofinochietti.me]]
 @rodolfof
 
+Mariano Sánchez
+@marianosz
+
+* Archivos
+
+.caption [[https://github.com/rfinochi/golang-workshop-src/tree/master/16-files][Ejercicio 16]]
+
+.code -numbers ./resources/src/files.go
+
+* Concurrencia - Go-Routines
+
+.caption [[https://github.com/rfinochi/golang-workshop-src/tree/master/17-concurrency][Ejercicio 17]]
+
+- Golang provee un mecanismo sencillo para crear un nuevo _"thread"_ [[https://medium.com/rungo/achieving-concurrency-in-go-3f84cbf870ca][*]].
+- Se usa el keyword *go* antes de una llamada a una funcion (Go-Routines).
+
+.image ./resources/images/concurrency.png 300 _
+
+* Concurrencia - Channels
+
+.caption [[https://github.com/rfinochi/golang-workshop-src/tree/master/17-concurrency][Ejercicio 17]]
+
+- Los Channels son _pipes_ para conectar _goroutines_ concurrentes.
+- Sirven para enviar y recibir valores entre dos _goroutines_.
+
+.image ./resources/images/channels.jpg 100 _
+
+.image ./resources/images/concurrency-channels.png 300 _
+
+* Challenge 3
+
+.image ./resources/images/chalenge-accepted.jpg 150 _
+
+.caption [[https://github.com/rfinochi/golang-workshop-src/tree/master/challenge3][Instrucciones del challenge 3]]
+
+* Programando una API REST - HTTP Router
+
+- Para crear una API REST vamos a usar el paquete [[http://www.gorillatoolkit.org/pkg/mux][gorilla/mux]].
+- _gorilla/mux_ implementa un router para asociar _requests_ con _handlers_ (funciones Golang).
+
+Se instala con:
+
+	$ go get -u github.com/gorilla/mux
+
+* Programando una API REST - HTTP Router
+
+.caption [[https://github.com/rfinochi/golang-workshop-src/tree/master/18-rest-api][Ejercicio 18]]
+
+.code ./resources/src/rest-api.go
+
+* Programando una API REST - JSON Encoding
+
+.caption [[https://github.com/rfinochi/golang-workshop-src/tree/master/18-rest-api][Ejercicio 18]]
+
+- Para trabajar JSON vamos a usar el paquete [[https://golang.org/pkg/encoding/json/][encoding/json]].
+- Se utilizan las funciones *Marshal* y *Encode*.
+
+* Programando una API REST - JSON Encoding
+
+.play -edit -numbers ./resources/src/rest-api-json.go
+
+* Challenge 4
+
+.image ./resources/images/chalenge-accepted.jpg 150 _
+
+Crear una API REST para una aplicacion de recordatorios (To-Do) que contenga todas las funciones [[https://en.wikipedia.org/wiki/Create,_read,_update_and_delete][CRUD]] para la siguiente entidad:
+
+	ID     int
+	Title  string
+	IsDone bool
+
+Hints:
+
+- Los datos se pueden almacenar en un arreglo.
+- La funcion *strconv.Atoi* del paquete *[[https://golang.org/pkg/strconv/][strconv]]* permite convertir un string a un integer.
+
 * Trabajando con MongoDB
 
 Official MongoDB Go driver
@@ -25,323 +101,3 @@ Modificar la API Rest del challenge 4.1 para que pueda acceder a diferentes fuen
 Hints:
 
 - Se pueden copiar las funciones necesarias para operar con MongoDB desde el [[https://github.com/rfinochi/golang-workshop-src/tree/master/19-dbaccess][Ejercicio 19]].
-
-* Gin Web Framework
-
-.image ./resources/images/gin-logo.jpg 250 _
-
-"[[https://gin-gonic.com/][Gin]] is a high-performance micro-framework that delivers a very minimalistic framework that carries with it only the most essential features, libraries, and functionalities needed to build web applications and microservices."
-
-* Gin Web Framework - Caracteristicas
-
-- Speed
-- Crash-Free
-- Routing
-- JSON Validation
-- Error Management
-- Built-In Rendering
-
-* Gin Web Framework
-
-.caption [[https://github.com/rfinochi/golang-workshop-src/tree/master/20-gin][Ejercicio 20]]
-
-	$ go get -u github.com/gin-gonic/gin
-	$ go get -u github.com/gin-gonic/contrib/static
-
-* Challenge 4.3
-
-.image ./resources/images/chalenge-accepted.jpg 150 _
-
-Modificar la API Rest del challenge 4.2 para usar Gin.
-
-* Error Handling
-
-El manejo de excepciones es una de las caracteristicas mas controversiales en Golang.
-
-.image ./resources/images/error-handling.jpg 450 _
-
-* Error Handling
-
-- Los errores en Golang *no* *son* excepciones.
-- Por convencion, si una funcion puede fallar deber retornar un tipo _error_.
-- El tipo _error_ contiene la infomacion del problema.
-- Si es _nil_ quiere decir que no hubo errores
-
-	func calculate(a, b int) (int, error) { }
-
-	result, err := caculate(a, b)
-	if err != nil {
-		// handle the error
-	}
-	// continue
-
-: https://medium.com/gett-engineering/error-handling-in-go-53b8a7112d04
-
-* Defer
-
-- Una declaracion _defer_ guarda la llamada a la funcion en una lista.
-- La lista de llamadas guardadas se ejecuta despues de que la funcion circundante termina.
-- _defer_ se usa comunmente para simplificar acciones de limpieza.
-
-	func CopyFile(dstName, srcName string) (written int64, err error) {
-		src, err := os.Open(srcName)
-		if err != nil {
-			return
-		}
-		defer src.Close()
-
-		dst, err := os.Create(dstName)
-		if err != nil {
-			return
-		}
-		defer dst.Close()
-
-		return io.Copy(dst, src)
-	}
-
-: https://blog.golang.org/defer-panic-and-recover
-
-* Panic y Recover
-
-- *panic* que detiene el flujo de control ordinario y comienza un proceso de panico (_panicking_).
-- Cuando la funcion F llama a _panic_, la ejecucion de F se detiene, las funciones diferidas en F se ejecutan normalmente y luego F vuelve a su llamador. 
-- Para el llamador, F se comporta como una llamada al panico, y vuelve a su llamador
-- El proceso continua hasta que todas las funciones retornan, momento en el cual el programa falla.
-- *recover* recupera el control de una funcion en panico. 
-- La recuperacion solo es util dentro de las funciones diferidas.
-- Durante la ejecucion normal, una llamada a recuperar devolvera nulo y no tendra otro efecto. 
-- Si la funcion actual esta en panico, una llamada a recuperar capturara el valor que se especifico al crear el panico y reanudara la ejecucion normal.
-
-* Panic y Recover
-
-.caption [[https://github.com/rfinochi/golang-workshop-src/tree/master/21-defer-panic-recover/main.go][Ejemplo]]
-
-- "Errors are values."
-- "Don't just check errors, handle them gracefully."
-- "Don't panic."
-
-All of Rob Pike's [[https://go-proverbs.github.io/][Go Proverbs]]
-
-* HTTP Client
-
-.caption [[https://github.com/rfinochi/golang-workshop-src/tree/master/22-http-client][Ejercicio 22]]
-
-El paquete [[http][https://golang.org/pkg/net/http/]] contiene una implementacion de un cliente http que permite emular las acciones que realiza un web browser.
-
-* HTTP Client - GET
-
-	resp, _ := http.Get("https://httpbin.org/get")
-	defer resp.Body.Close()
-
-	data, _ := ioutil.ReadAll(resp.Body)
-	fmt.Println(string(data))
-
-* HTTP Client - POST
-
-	payload := "Hello world!"
-	resp, _ := http.Post("https://httpbin.org/post", "text/plain", strings.NewReader(payload))
-	defer resp.Body.Close()
-
-	data, _ := ioutil.ReadAll(resp.Body)
-	fmt.Println(string(data))
-
-* Programacion funcional
-
-Functional Programming by Wikipedia:
-
-	Functional programming is a programming paradigm that treats computation 
-	as the evaluation of mathematical functions and avoids state and mutable data
-	
-En otras palabras la programacion funcional promueve codigo sin cambios en los valores de las variables para evitar efectos no esperados.
-
-Es lo opuesto de la programacion imperativa, que enfatiza los cambios de estado.
-
-: https://medium.com/@geisonfgfg/functional-go-bc116f4c96a4
-
-* Programacion funcional
-
-Esto quiere decir que:
-
-- La informacion no cambia (no mutable data).
-- No hay estado.
-- Una vez asignado un valor a una variable (value binding), la variable (symbol) no puede cambiar su valor.
-- La salida (output) de una funcion solo depende de los valores de entrada (input).
-
-* Programacion funcional - Ventajas
-
-- *Codigo* *mas* *limpio*: las _variables_ no se modifican una vez que se definene, por lo tanto no tenemos que seguir los cambios de estado por todo el codigo para comprender como funciona el codigo de un programa.
-- *Referential* *transparency*: Las expresiones pueden ser reemplazadas por sus valores. Si llamamos a una funcion con los mismo valores, estamos seguros que el resultado es el mismo (no hay estado en ningun otro codigo del programa que pueda cambiar el resultado).
-
-	No hay razon para lo que Einstein definio como locura:
-	"hacer la misma cosa una y otra vez esperando diferentes resultados"
-
-* Programacion funcional en Golang
-
-Golang es un lenguaje de programacion multi-lenguaje, no es un lenguaje funcional, pero tiene caracteristicas que nos permiten desarrollar codigo que aplique los principios de la programacion funcional.
-
-* Programacion funcional en Golang - Nunca actualizar, siempre crear
-
-*Strings*
-
-Mal
-
-	name := "Juan"
-	name := name + " Carlos"
-
-Bien
-
-	const firstname = "Juan Carlos"
-	const lasname = "Batman"
-	const name = firstname + " " + lastname
-
-* Programacion funcional en Golang - Nunca actualizar, siempre crear
-
-*Arrays*
-
-Mal
-
-	years := [4]int{2001, 2002}
-	years[2] = 2003
-	years[3] = 2004
-	years // [2001, 2002, 2003, 2004]
-
-Bien
-
-	years := [2]int{2001, 2001}
-	allYears := append(years, 2003, [2]int{2004, 2005}
-
-* Programacion funcional en Golang - Nunca actualizar, siempre crear
-
-*Maps*
-
-Mal
-
-	ages := map[string]int{"John": 30}
-	ages["Mary"] = 28
-	ages // {"John": 30, "Mary": 28}
-
-Bien
-
-	ages1 := map[string]int{"John": 30}
-	ages2 := map[string]int{"Mary": 28}
-	func mergeMaps(mapA, mapB map[string]int) map[string]int {
-		allAges := make(map[K]V, len(ages1) + len(ages2))
-		for k, v := range mapA {
-			allAges[k] = v
-		}
-		for k, v := range mapB {
-			allAges[k] = v
-		}
-		return allAges
-	}
-	allAges := mergeMaps(ages1, ages2)
-
-* Programacion funcional en Golang - Higher Order Functions
-
-Las funciones son _first-class_ _objects_ en Golang, si se quiere pasar una funcion a otra funcion, se debe tratar como cualquier otro objeto.
-
-	func caller(f func(string) string) {
-		result := f("Juan")
-		fmt.Println(result)
-	}
-	
-	f := func(s name) string {
-		return "Hola " + name
-	}
-	
-	caller(f)
-
-* Programacion funcional en Golang - Currying
-
-Tener *higher* *order* *functions* habilita el *currying*, que es la posibilidad de tomar una funcion que recibe n parametros y convertirla en la composicion de n funciones que reciben 1 parametro:
-
-	func plus(x, y int) int {
-		return x + y
-	}
-
-	func partialPlus(x int) func(int) int {
-		return func(y int) int {
-			return plus(x, y)
-		}
-	}
-
-	func main()
-	{
-		plus_one := partialPlus(1)
-		fmt.Println(plus_one(5)) //prints 6
-	}
-
-* Google App Engine Deploy 
-
-Crear un proyecto
-
-	$ gcloud projects create PROJECT_ID
-
-Configurar el proyecto por defecto en nuestro entorno
-
-	$ gcloud config set project PROJECT_ID
-
-Crear una nueva aplicacion en [[https://cloud.google.com/appengine][GAE]]
-
-	$ gcloud app create
-
-* Google App Engine Deploy - Service Configuration File
-
-Agregar un archivo [[https://cloud.google.com/appengine/docs/flexible/go/configuring-your-app-with-app-yaml][app.yaml]]
-
-	runtime: go113
-
-	env_variables:
-	  GOLANGORG_CHECK_COUNTRY: true
-
-	nobuild_files: views/
-
-* Google App Engine Deploy 
-
-Subir la aplicacion a [[https://cloud.google.com/appengine][GAE]]
-
-	$ gcloud app deploy
-
-Abrir la aplicacion
-
-	$ gcloud app browse
-
-[[https://cloud.google.com/appengine/docs/standard/go112/building-app][* Building a Go App on App Engine]]
-
-* Azure Deploy
-
-- Crear un nuevo Web Site en el portal de Azure
-- Instalar Go via la consola
-
-    $ curl -O https://storage.googleapis.com/golang/go1.13.windows-386.zip
-    $ unzip go1.13.windows-386.zip
-
-    Comprobar la ultima version en https://golang.org/dl
-    No preocuparse si aparece el error Bad Request
-
-- Copiar nuestro codigo en el Web Site
-- La variable de entorno que especifica el port es:
-	http.ListenAndServe(":"+os.Getenv("HTTP_PLATFORM_PORT"), nil)
-- Crear un Web.config con la siguiente configuracion (next slide)
-
-: http://www.wadewegner.com/2014/12/4-simple-steps-to-run-go-language-in-azure-websites/
-
-* Azure Deploy
-
-	<?xml version="1.0" encoding="UTF-8"?>
-	<configuration>
-	    <system.webServer>
-	<handlers>
-	    <add name="httpplatformhandler" path="*" verb="*" 
-		modules="httpPlatformHandler" 
-		resourceType="Unspecified" />
-	</handlers>
-	<httpPlatform processPath="d:\home\site\wwwroot\go\bin\go.exe" 
-	      arguments="run d:\home\site\wwwroot\server.go" 
-	      startupTimeLimit="60">
-	    <environmentVariables>
-	      <environmentVariable name="GOROOT" value="d:\home\site\wwwroot\go" />
-	    </environmentVariables>
-	</httpPlatform>
-	    </system.webServer>
-	</configuration>
