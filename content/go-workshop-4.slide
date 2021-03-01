@@ -31,11 +31,11 @@ Mariano Sánchez
 	$ go get -u github.com/gin-gonic/gin
 	$ go get -u github.com/gin-gonic/contrib/static
 
-* Challenge 4.3
+* Challenge 4.1
 
 .image ./resources/images/chalenge-accepted.jpg 150 _
 
-Modificar la API Rest del challenge 4.2 para usar Gin.
+Modificar la API Rest del challenge 3.2 para usar Gin.
 
 * HTTP Client
 

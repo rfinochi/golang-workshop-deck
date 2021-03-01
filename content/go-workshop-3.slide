@@ -35,11 +35,11 @@ Mariano Sánchez
 
 .image ./resources/images/concurrency-channels.png 300 _
 
-* Challenge 3
+* Challenge 3.1
 
 .image ./resources/images/chalenge-accepted.jpg 150 _
 
-.caption [[https://github.com/rfinochi/golang-workshop-src/tree/master/challenge3][Instrucciones del challenge 3]]
+.caption [[https://github.com/rfinochi/golang-workshop-src/tree/master/challenge3/3.1][Instrucciones del challenge 3.1]]
 
 * Programando una API REST - HTTP Router
 
@@ -67,7 +67,7 @@ Se instala con:
 
 .play -edit -numbers ./resources/src/rest-api-json.go
 
-* Challenge 4
+* Challenge 3.2
 
 .image ./resources/images/chalenge-accepted.jpg 150 _
 
@@ -92,7 +92,7 @@ Official MongoDB Go driver
 
 .caption [[https://github.com/rfinochi/golang-workshop-src/tree/master/19-dbaccess][Ejercicio 19]]
 
-* Challenge 4.2
+* Challenge 3.3
 
 .image ./resources/images/chalenge-accepted.jpg 150 _
 
