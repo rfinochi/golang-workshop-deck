@@ -186,7 +186,7 @@ Comandos basicos desde consola
 
 .play -edit -numbers ./resources/src/for-printTower.go
 
-* Instrucciones de control - for Range
+* Instrucciones de control - for range
 
 .caption [[https://github.com/rfinochi/golang-workshop-src/tree/master/07-control-statments][Ejercicio 7]]
 
