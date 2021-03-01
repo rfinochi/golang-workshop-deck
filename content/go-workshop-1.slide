@@ -183,6 +183,12 @@ Comandos basicos desde consola
 
 .play -edit -numbers ./resources/src/for-printTower.go
 
+* Instrucciones de control - for Range
+
+.caption [[https://github.com/rfinochi/golang-workshop-src/tree/master/07-control-statments][Ejercicio 7]]
+
+.play -edit -numbers ./resources/src/for-range.go
+
 * Instrucciones de control - switch
 
 .caption [[https://github.com/rfinochi/golang-workshop-src/tree/master/07-control-statments][Ejercicio 7]]
