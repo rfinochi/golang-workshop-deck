@@ -82,22 +82,32 @@ Hints:
 - Los datos se pueden almacenar en un arreglo.
 - La funcion *strconv.Atoi* del paquete *[[https://golang.org/pkg/strconv/][strconv]]* permite convertir un string a un integer.
 
-* Trabajando con MongoDB
+* Acceso a Datos
 
 Official MongoDB Go driver
 	
 	$ go get -u go.mongodb.org/mongo-driver/mongo
 
-* Trabajando con MongoDB
+Official mysql Go driver
+	
+	$ go get github.com/go-sql-driver/mysql
 
-.caption [[https://github.com/rfinochi/golang-workshop-src/tree/master/19-dbaccess][Ejercicio 19]]
+* Acceso a Datos
+
+Trabajando con MongoDB
+
+.caption [[https://github.com/rfinochi/golang-workshop-src/tree/master/19-dbaccess/mongo][Ejercicio 19 - Mongo]]
+
+Trabajando con mysql
+
+.caption [[https://github.com/rfinochi/golang-workshop-src/tree/master/19-dbaccess/mysql][Ejercicio 19 - mysql]]
 
 * Challenge 3.3
 
 .image ./resources/images/chalenge-accepted.jpg 150 _
 
-Modificar la API Rest del challenge 4.1 para que pueda acceder a diferentes fuentes de datos (en memoria y MongoDB) usando el patron [[https://medium.com/@pererikbergman/repository-design-pattern-e28c0f3e4a30][Repository]].
+Modificar la API Rest del challenge 4.1 para que pueda acceder a diferentes fuentes de datos (en memoria y (MongoDB / mysql)) usando el patron [[https://medium.com/@pererikbergman/repository-design-pattern-e28c0f3e4a30][Repository]].
 
 Hints:
 
-- Se pueden copiar las funciones necesarias para operar con MongoDB desde el [[https://github.com/rfinochi/golang-workshop-src/tree/master/19-dbaccess][Ejercicio 19]].
+- Se pueden copiar las funciones necesarias para operar con MongoDB / mySql desde el [[https://github.com/rfinochi/golang-workshop-src/tree/master/19-dbaccess][Ejercicio 19]].
