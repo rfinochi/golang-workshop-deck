@@ -6,6 +6,9 @@ Rodolfo Finochietti
 [[https://rodolfofinochietti.me]]
 @rodolfof
 
+Mariano Sánchez
+@marianosz
+
 * Bienvenidos!
 
 .image ./resources/images/gopher.jpg 500 _
@@ -28,22 +31,28 @@ Rodolfo Finochietti
 - Introduccion
 - Instalacion
 - Basics
+- Arrays
 - Packages
-- Testing
 
 * Agenda - Dia 2
-
+- Arguments
+- Testing
 - Structs
+- Pointers
 - Interfaces
-- Concurrency
-- Building a RESTful API
+- Error Handling
 
 * Agenda - Dia 3
-
+- Files
+- Concurrency
+- HTTP
+- Building a RESTful API
 - DB Access
+
+* Agenda - Dia 4
+- Web UI
 - Gin Web Framework
 - Http Client
-- Error Handling
 - Bonus Track 1: Programacion funcional en Golang
 - Bonus Track 2: Deploy in Google App Engine
 - Bonus Track 3: Deploy in Azure
