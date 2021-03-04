@@ -12,7 +12,7 @@ Mariano Sánchez
 * Most popular languages
 
 .image ./resources/images/most_popular_languages.jpg 430 _
-.caption [[https://insights.stackoverflow.com/survey/2019][Stack Overflow Developer Survey 2019]]
+.caption [[https://insights.stackoverflow.com/survey/2020][Stack Overflow Developer Survey 2020]]
 
 "The street finds its own uses for things."
 Burning Chrome, William Gibson
@@ -54,14 +54,14 @@ Burning Chrome, William Gibson
 	all three were not available in the same mainstream language.
 
 - Arranca como proyecto en 2007 dentro de Google. Goals: eliminar la *lentitud* y la *torpeza* a la hora de desarrollar software en Google.
-- Anunciado al mundo en 2009, en 2012 se estabiliza la API con la version 1.0 . La version actual es la 1.15.x, siguiendo su promesa de [[https://golang.org/doc/go1compat][compatibilidad]].
+- Anunciado al mundo en 2009, en 2012 se estabiliza la API con la version 1.0 . La version actual es la 1.16.x, siguiendo su promesa de [[https://golang.org/doc/go1compat][compatibilidad]].
 - Es necesario que los desarrolladores puedan ser *productivos* *muy* *rapidamente* con lenguajes y herramientas _serias_.
 - El lenguaje fue pensado por y para personas que escriben, leen y debuggean grandes piezas de software.
 
 * Otra razon - $$$ - :)
 
 .image ./resources/images/top_paying_technologies.jpg 500 _
-.caption [[https://insights.stackoverflow.com/survey/2019][Stack Overflow Developer Survey 2019]]
+.caption [[https://insights.stackoverflow.com/survey/2020][Stack Overflow Developer Survey 2020]]
 
 
 * Premisas
