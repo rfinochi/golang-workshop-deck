@@ -295,7 +295,7 @@ El manejo de excepciones es una de las caracteristicas mas controversiales en Go
 
 * Panic y Recover
 
-- *panic* que detiene el flujo de control ordinario y comienza un proceso de panico (_panicking_).
+- *panic* detiene el flujo de control ordinario y comienza un proceso de panico (_panicking_).
 - Cuando la funcion F llama a _panic_, la ejecucion de F se detiene, las funciones diferidas en F se ejecutan normalmente y luego F vuelve a su llamador. 
 - Para el llamador, F se comporta como una llamada al panico, y vuelve a su llamador
 - El proceso continua hasta que todas las funciones retornan, momento en el cual el programa falla.
