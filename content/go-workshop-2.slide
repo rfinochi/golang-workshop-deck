@@ -101,18 +101,6 @@ Un loop es un operacion crucial en un benchmark, *cuidado!*
 - Estan verificados por que tambien se corren como tests. 
 - Tambien se pueden ejecutar por el usuario al leer la documentacion web generada con la herramienta _godoc_ (el usuario dispone de un boton _Run_ _Test_).
 
-* Challenge 2.1
-
-.image ./resources/images/chalenge-accepted.jpg 150 _
-
-Cambiar el programa para que el parametro string de la funcion _Reverse_ se obtenga desde la linea de comandos con un flag llamado _text_.
-
-* Challenge 2.2
-
-.image ./resources/images/chalenge-accepted.jpg 150 _
-
-Crear un _unit_ _test_, un _benchmark_, y un _example_ para la funcion _Reverse_.
-
 * Structs
 
 .caption [[https://github.com/rfinochi/golang-workshop-src/tree/master/13-structs][Ejercicio 13]]
@@ -325,6 +313,22 @@ El manejo de excepciones es una de las caracteristicas mas controversiales en Go
 - "Don't panic."
 
 All of Rob Pike's [[https://go-proverbs.github.io/][Go Proverbs]]
+
+* Review time
+
+.image ./resources/images/review-time.png 500 _
+
+* Challenge 2.1
+
+.image ./resources/images/chalenge-accepted.jpg 150 _
+
+Cambiar el programa para que el parametro string de la funcion _Reverse_ se obtenga desde la linea de comandos con un flag llamado _text_.
+
+* Challenge 2.2
+
+.image ./resources/images/chalenge-accepted.jpg 150 _
+
+Crear un _unit_ _test_, un _benchmark_, y un _example_ para la funcion _Reverse_.
 
 * Challenge 2.3
 
