@@ -35,11 +35,25 @@ Mariano Sánchez
 
 .image ./resources/images/concurrency-channels.png 300 _
 
-* Challenge 3.1
+* Acceso a Datos
 
-.image ./resources/images/chalenge-accepted.jpg 150 _
+Official MongoDB Go driver
+	
+	$ go get -u go.mongodb.org/mongo-driver/mongo
 
-.caption [[https://github.com/rfinochi/golang-workshop-src/tree/master/challenge3/3.1][Instrucciones del challenge 3.1]]
+Official mysql Go driver
+	
+	$ go get github.com/go-sql-driver/mysql
+
+* Acceso a Datos
+
+Trabajando con MongoDB
+
+.caption [[https://github.com/rfinochi/golang-workshop-src/tree/master/19-dbaccess/mongo][Ejercicio 18 - Mongo]]
+
+Trabajando con mysql
+
+.caption [[https://github.com/rfinochi/golang-workshop-src/tree/master/19-dbaccess/mysql][Ejercicio 18 - mysql]]
 
 * Programando una API REST - HTTP Router
 
@@ -52,13 +66,13 @@ Se instala con:
 
 * Programando una API REST - HTTP Router
 
-.caption [[https://github.com/rfinochi/golang-workshop-src/tree/master/18-rest-api][Ejercicio 18]]
+.caption [[https://github.com/rfinochi/golang-workshop-src/tree/master/18-rest-api][Ejercicio 19]]
 
 .code ./resources/src/rest-api.go
 
 * Programando una API REST - JSON Encoding
 
-.caption [[https://github.com/rfinochi/golang-workshop-src/tree/master/18-rest-api][Ejercicio 18]]
+.caption [[https://github.com/rfinochi/golang-workshop-src/tree/master/18-rest-api][Ejercicio 19]]
 
 - Para trabajar JSON vamos a usar el paquete [[https://golang.org/pkg/encoding/json/][encoding/json]].
 - Se utilizan las funciones *Marshal* y *Encode*.
@@ -66,6 +80,16 @@ Se instala con:
 * Programando una API REST - JSON Encoding
 
 .play -edit -numbers ./resources/src/rest-api-json.go
+
+* Review time
+
+.image ./resources/images/review-time.png 500 _
+
+* Challenge 3.1
+
+.image ./resources/images/chalenge-accepted.jpg 150 _
+
+.caption [[https://github.com/rfinochi/golang-workshop-src/tree/master/challenge3/3.1][Instrucciones del challenge 3.1]]
 
 * Challenge 3.2
 
@@ -81,26 +105,6 @@ Hints:
 
 - Los datos se pueden almacenar en un arreglo.
 - La funcion *strconv.Atoi* del paquete *[[https://golang.org/pkg/strconv/][strconv]]* permite convertir un string a un integer.
-
-* Acceso a Datos
-
-Official MongoDB Go driver
-	
-	$ go get -u go.mongodb.org/mongo-driver/mongo
-
-Official mysql Go driver
-	
-	$ go get github.com/go-sql-driver/mysql
-
-* Acceso a Datos
-
-Trabajando con MongoDB
-
-.caption [[https://github.com/rfinochi/golang-workshop-src/tree/master/19-dbaccess/mongo][Ejercicio 19 - Mongo]]
-
-Trabajando con mysql
-
-.caption [[https://github.com/rfinochi/golang-workshop-src/tree/master/19-dbaccess/mysql][Ejercicio 19 - mysql]]
 
 * Challenge 3.3
 
