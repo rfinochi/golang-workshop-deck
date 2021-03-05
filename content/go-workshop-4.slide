@@ -9,6 +9,10 @@ Rodolfo Finochietti
 Mariano Sánchez
 @marianosz
 
+* Programando una App Web - HTTP Router
+
+.caption [[https://github.com/rfinochi/golang-workshop-src/tree/master/20-web-ui][Ejercicio 20]]
+
 * Gin Web Framework
 
 .image ./resources/images/gin-logo.jpg 250 _
@@ -30,12 +34,6 @@ Mariano Sánchez
 
 	$ go get -u github.com/gin-gonic/gin
 	$ go get -u github.com/gin-gonic/contrib/static
-
-* Challenge 4.1
-
-.image ./resources/images/chalenge-accepted.jpg 150 _
-
-Modificar la API Rest del challenge 3.2 para usar Gin.
 
 * HTTP Client
 
@@ -260,3 +258,13 @@ Abrir la aplicacion
 	</httpPlatform>
 	    </system.webServer>
 	</configuration>
+	
+* Review time
+
+.image ./resources/images/review-time.png 500 _
+
+* Challenge 4.1
+
+.image ./resources/images/chalenge-accepted.jpg 150 _
+
+Modificar la API Rest del challenge 3.2 para usar Gin.
