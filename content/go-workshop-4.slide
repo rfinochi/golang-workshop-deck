@@ -26,7 +26,7 @@ Mariano Sánchez
 
 * Gin Web Framework
 
-.caption [[https://github.com/rfinochi/golang-workshop-src/tree/master/20-gin][Ejercicio 20]]
+.caption [[https://github.com/rfinochi/golang-workshop-src/tree/master/21-gin][Ejercicio 21]]
 
 	$ go get -u github.com/gin-gonic/gin
 	$ go get -u github.com/gin-gonic/contrib/static
