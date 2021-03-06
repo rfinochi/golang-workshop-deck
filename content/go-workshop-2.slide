@@ -27,6 +27,12 @@ Mariano Sánchez
 
 .code -numbers ./resources/src/cmdline-env.go
 
+* Archivos
+
+.caption [[https://github.com/rfinochi/golang-workshop-src/tree/master/12-files][Ejercicio 12]]
+
+.code -numbers ./resources/src/files.go
+
 * Testing
 
 - Golang posee un framework de testing incluido en la standard library.
@@ -39,7 +45,7 @@ Mariano Sánchez
 
 * Testing - Unit Test
 
-.caption [[https://github.com/rfinochi/golang-workshop-src/tree/master/12-testing][Ejercicio 12]]
+.caption [[https://github.com/rfinochi/golang-workshop-src/tree/master/13-testing][Ejercicio 13]]
 
 .code -numbers ./resources/src/test.go
 
@@ -59,7 +65,7 @@ Se pueden exportar los resultados y verlos en html con:
 
 * Testing - Benchmark
 
-.caption [[https://github.com/rfinochi/golang-workshop-src/tree/master/12-testing][Ejercicio 12]]
+.caption [[https://github.com/rfinochi/golang-workshop-src/tree/master/13-testing][Ejercicio 13]]
 
 .code -numbers ./resources/src/test-benchmark.go
 
@@ -70,7 +76,7 @@ Se pueden exportar los resultados y verlos en html con:
 
 * Testing - Benchmark
 
-.caption [[https://github.com/rfinochi/golang-workshop-src/tree/master/12-testing][Ejercicio 12]]
+.caption [[https://github.com/rfinochi/golang-workshop-src/tree/master/13-testing][Ejercicio 13]]
 
 Un benchmark se ejecuta con el comando *go* *test* *-bench=.* (el parametro _bench_ es _regex_ para indicar cuales benchmarks queremos correr).
 
@@ -85,7 +91,7 @@ La segunda linea indica el valor final de *b.N* y el tiempo promedio de ejecucio
 
 * Testing - Benchmark
 
-.caption [[https://github.com/rfinochi/golang-workshop-src/tree/master/12-testing][Ejercicio 12]]
+.caption [[https://github.com/rfinochi/golang-workshop-src/tree/master/13-testing][Ejercicio 13]]
 
 .code -numbers ./resources/src/test-benchmark-wrong.go
 
@@ -93,7 +99,7 @@ Un loop es un operacion crucial en un benchmark, *cuidado!*
 
 * Testing - Example
 
-.caption [[https://github.com/rfinochi/golang-workshop-src/tree/master/12-testing][Ejercicio 12]]
+.caption [[https://github.com/rfinochi/golang-workshop-src/tree/master/13-testing][Ejercicio 13]]
 
 .code -numbers ./resources/src/test-example.go
 
@@ -103,7 +109,7 @@ Un loop es un operacion crucial en un benchmark, *cuidado!*
 
 * Structs
 
-.caption [[https://github.com/rfinochi/golang-workshop-src/tree/master/13-structs][Ejercicio 13]]
+.caption [[https://github.com/rfinochi/golang-workshop-src/tree/master/14-structs][Ejercicio 14]]
 
 - Coleccion de campos tipados.
 - Pueden contener metodos.
@@ -119,13 +125,13 @@ Golang favorece la composicion por sobre la herencia:
 
 * Structs anidados
 
-.caption [[https://github.com/rfinochi/golang-workshop-src/tree/master/13-structs][Ejercicio 13]]
+.caption [[https://github.com/rfinochi/golang-workshop-src/tree/master/14-structs][Ejercicio 14]]
 
 .code ./resources/src/structs-nested.go
 
 * Structs - Metodos
 
-.caption [[https://github.com/rfinochi/golang-workshop-src/tree/master/13-structs][Ejercicio 13]]
+.caption [[https://github.com/rfinochi/golang-workshop-src/tree/master/14-structs][Ejercicio 14]]
 
 Un metodo no es mas que una funcion con un argumento receptor especial
 
@@ -133,7 +139,7 @@ Un metodo no es mas que una funcion con un argumento receptor especial
 
 * Punteros
 
-.caption [[https://github.com/rfinochi/golang-workshop-src/tree/master/13-structs][Ejercicio 13]]
+.caption [[https://github.com/rfinochi/golang-workshop-src/tree/master/14-structs][Ejercicio 14]]
 
 - Golang soporta punteros para actualizar valores pero no admite aritmetica de punteros como en C. 
 - *** se usa como prefijo para definir un puntero para de un tipo dado.
@@ -142,7 +148,7 @@ Un metodo no es mas que una funcion con un argumento receptor especial
 
 * Structs compuestos
 
-.caption [[https://github.com/rfinochi/golang-workshop-src/tree/master/13-structs][Ejercicio 13]]
+.caption [[https://github.com/rfinochi/golang-workshop-src/tree/master/14-structs][Ejercicio 14]]
 
 [[http://blog.ralch.com/tutorial/design-patterns/golang-composite/][Composition Design Pattern]]
 
@@ -150,7 +156,7 @@ Un metodo no es mas que una funcion con un argumento receptor especial
 
 * Interfaces
 
-.caption [[https://github.com/rfinochi/golang-workshop-src/tree/master/14-interfaces][Ejercicio 14]]
+.caption [[https://github.com/rfinochi/golang-workshop-src/tree/master/15-interfaces][Ejercicio 15]]
 
 - El feature mas importante del lenguaje segun Rob Pike.
 - Extensamente usadas en la standard library.
@@ -167,7 +173,7 @@ Lo mas importante de las interfaces es la cultura detras de ellas, piezas de cod
 
 * Interfaces values
 
-.caption [[https://github.com/rfinochi/golang-workshop-src/tree/master/14-interfaces/interface-values.go][Ejemplo]]
+.caption [[https://github.com/rfinochi/golang-workshop-src/tree/master/15-interfaces/interface-values.go][Ejemplo]]
 
 Los valores de la interfaz pueden considerarse como una tupla de un valor y un tipo concreto, esto se llaman _interface_ _value_:
 
@@ -178,7 +184,7 @@ Los valores de la interfaz pueden considerarse como una tupla de un valor y un t
 
 * The empty interface
 
-.caption [[https://github.com/rfinochi/golang-workshop-src/tree/master/14-interfaces/empty-interface.go.go][Ejemplo]]
+.caption [[https://github.com/rfinochi/golang-workshop-src/tree/master/15-interfaces/empty-interface.go.go][Ejemplo]]
 
 Una interfaz sin metodos se conoce como interfaz vacia:
 
@@ -189,7 +195,7 @@ Una interfaz sin metodos se conoce como interfaz vacia:
 
 * Type assertions
 
-.caption [[https://github.com/rfinochi/golang-workshop-src/tree/master/14-interfaces/type-assertions.go][Ejemplo]]
+.caption [[https://github.com/rfinochi/golang-workshop-src/tree/master/15-interfaces/type-assertions.go][Ejemplo]]
 
 El mecanismo de _type_ _assertion_ provee acceso a los valores concretos de un _interface_ _value_:
 
@@ -245,74 +251,6 @@ La inicializacion implicita mas el _&_ es equivalente a _new_.
 
 	juan := Person{"Juan", 22}
 	juanPointer := &Person{Name: "Juan", Age: 22}
-
-* Error Handling
-
-El manejo de excepciones es una de las caracteristicas mas controversiales en Golang.
-
-.image ./resources/images/error-handling.jpg 450 _
-
-* Error Handling
-
-- Los errores en Golang *no* *son* excepciones.
-- Por convencion, si una funcion puede fallar deber retornar un tipo _error_.
-- El tipo _error_ contiene la infomacion del problema.
-- Si es _nil_ quiere decir que no hubo errores
-
-	func calculate(a, b int) (int, error) { }
-
-	result, err := caculate(a, b)
-	if err != nil {
-		// handle the error
-	}
-	// continue
-
-: https://medium.com/gett-engineering/error-handling-in-go-53b8a7112d04
-
-* Defer
-
-- Una declaracion _defer_ guarda la llamada a la funcion en una lista.
-- La lista de llamadas guardadas se ejecuta despues de que la funcion circundante termina.
-- _defer_ se usa comunmente para simplificar acciones de limpieza.
-
-	func CopyFile(dstName, srcName string) (written int64, err error) {
-		src, err := os.Open(srcName)
-		if err != nil {
-			return
-		}
-		defer src.Close()
-
-		dst, err := os.Create(dstName)
-		if err != nil {
-			return
-		}
-		defer dst.Close()
-
-		return io.Copy(dst, src)
-	}
-
-: https://blog.golang.org/defer-panic-and-recover
-
-* Panic y Recover
-
-- *panic* detiene el flujo de control ordinario y comienza un proceso de panico (_panicking_).
-- Cuando la funcion F llama a _panic_, la ejecucion de F se detiene, las funciones diferidas en F se ejecutan normalmente y luego F vuelve a su llamador. 
-- Para el llamador, F se comporta como una llamada al panico, y vuelve a su llamador
-- El proceso continua hasta que todas las funciones retornan, momento en el cual el programa falla.
-- *recover* recupera el control de una funcion en panico. 
-- La recuperacion solo es util dentro de las funciones diferidas.
-- Durante la ejecucion normal, una llamada a recuperar devolvera nulo y no tendra otro efecto. 
-- Si la funcion actual esta en panico, una llamada a recuperar capturara el valor que se especifico al crear el panico y reanudara la ejecucion normal.
-
-* Panic y Recover
-
-.caption [[https://github.com/rfinochi/golang-workshop-src/tree/master/15-defer-panic-recover/main.go][Ejemplo]]
-
-- "Errors are values."
-- "Don't just check errors, handle them gracefully."
-- "Don't panic."
-
-All of Rob Pike's [[https://go-proverbs.github.io/][Go Proverbs]]
 
 * Review time
 

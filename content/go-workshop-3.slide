@@ -9,11 +9,73 @@ Rodolfo Finochietti
 Mariano Sánchez
 @marianosz
 
-* Archivos
+* Error Handling
 
-.caption [[https://github.com/rfinochi/golang-workshop-src/tree/master/16-files][Ejercicio 16]]
+El manejo de excepciones es una de las caracteristicas mas controversiales en Golang.
 
-.code -numbers ./resources/src/files.go
+.image ./resources/images/error-handling.jpg 450 _
+
+* Error Handling
+
+- Los errores en Golang *no* *son* excepciones.
+- Por convencion, si una funcion puede fallar deber retornar un tipo _error_.
+- El tipo _error_ contiene la infomacion del problema.
+- Si es _nil_ quiere decir que no hubo errores
+
+	func calculate(a, b int) (int, error) { }
+
+	result, err := caculate(a, b)
+	if err != nil {
+		// handle the error
+	}
+	// continue
+
+: https://medium.com/gett-engineering/error-handling-in-go-53b8a7112d04
+
+* Defer
+
+- Una declaracion _defer_ guarda la llamada a la funcion en una lista.
+- La lista de llamadas guardadas se ejecuta despues de que la funcion circundante termina.
+- _defer_ se usa comunmente para simplificar acciones de limpieza.
+
+	func CopyFile(dstName, srcName string) (written int64, err error) {
+		src, err := os.Open(srcName)
+		if err != nil {
+			return
+		}
+		defer src.Close()
+
+		dst, err := os.Create(dstName)
+		if err != nil {
+			return
+		}
+		defer dst.Close()
+
+		return io.Copy(dst, src)
+	}
+
+: https://blog.golang.org/defer-panic-and-recover
+
+* Panic y Recover
+
+- *panic* detiene el flujo de control ordinario y comienza un proceso de panico (_panicking_).
+- Cuando la funcion F llama a _panic_, la ejecucion de F se detiene, las funciones diferidas en F se ejecutan normalmente y luego F vuelve a su llamador. 
+- Para el llamador, F se comporta como una llamada al panico, y vuelve a su llamador
+- El proceso continua hasta que todas las funciones retornan, momento en el cual el programa falla.
+- *recover* recupera el control de una funcion en panico. 
+- La recuperacion solo es util dentro de las funciones diferidas.
+- Durante la ejecucion normal, una llamada a recuperar devolvera nulo y no tendra otro efecto. 
+- Si la funcion actual esta en panico, una llamada a recuperar capturara el valor que se especifico al crear el panico y reanudara la ejecucion normal.
+
+* Panic y Recover
+
+.caption [[https://github.com/rfinochi/golang-workshop-src/tree/master/16-defer-panic-recover/main.go][Ejemplo]]
+
+- "Errors are values."
+- "Don't just check errors, handle them gracefully."
+- "Don't panic."
+
+All of Rob Pike's [[https://go-proverbs.github.io/][Go Proverbs]]
 
 * Concurrencia - Go-Routines
 
