@@ -237,19 +237,21 @@ Un _type_ _switch_ es un mecanismo que permite hacer _type_ _assertions_ en seri
 		Name string
 		Age  int
 	}
+
 	juan := new(Person)
 
 * Creacion de tipos - Struct Types
 
 	var juan Person
-	rect.Name = "Juan"
-	rect.Age = 40
+	juan.Name = "Juan"
+	juan.Age = 40
 
 * Creacion de tipos - Struct Literal y &
 
 La inicializacion implicita mas el _&_ es equivalente a _new_.
 
 	juan := Person{"Juan", 22}
+	
 	juanPointer := &Person{Name: "Juan", Age: 22}
 
 * Review time
