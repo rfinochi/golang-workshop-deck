@@ -143,6 +143,16 @@ Se instala con:
 
 .play -edit -numbers ./resources/src/rest-api-json.go
 
+## Middlewares
+
+- Cualquier funcionalidad compartida que se desee reutilizar para distintas *requests HTTP* se puede desarrollar como un *middleware*. 
+- Por ejemplo, es posible que se desee registrar cada request, comprimir cada respuesta o verificar un caché.
+- Un *middleware* se trata de código autónomo que actúa de forma independiente sobre un *request* antes o después de los *handlers* de la app. 
+
+El patrón estándar para crear un *middleware* custom es el siguiente:
+
+.code ./resources/src/rest-api-middleware.go
+
 * Review time
 
 .image ./resources/images/review-time.png 500 _
