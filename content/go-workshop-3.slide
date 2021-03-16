@@ -103,7 +103,7 @@ Official MongoDB Go driver
 	
 	$ go get -u go.mongodb.org/mongo-driver/mongo
 
-Official mysql Go driver
+Official MySQL Go driver
 	
 	$ go get github.com/go-sql-driver/mysql
 
@@ -113,9 +113,9 @@ Trabajando con MongoDB
 
 .caption [[https://github.com/rfinochi/golang-workshop-src/tree/master/19-dbaccess/mongo][Ejercicio 18 - Mongo]]
 
-Trabajando con mysql
+Trabajando con MySQL
 
-.caption [[https://github.com/rfinochi/golang-workshop-src/tree/master/19-dbaccess/mysql][Ejercicio 18 - mysql]]
+.caption [[https://github.com/rfinochi/golang-workshop-src/tree/master/19-dbaccess/mysql][Ejercicio 18 - MySQL]]
 
 * Programando una API REST - HTTP Router
 
