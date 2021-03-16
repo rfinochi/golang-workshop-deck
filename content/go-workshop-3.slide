@@ -111,11 +111,11 @@ Official MySQL Go driver
 
 Trabajando con MongoDB
 
-.caption [[https://github.com/rfinochi/golang-workshop-src/tree/master/19-dbaccess/mongo][Ejercicio 18 - Mongo]]
+.caption [[https://github.com/rfinochi/golang-workshop-src/tree/master/18-dbaccess/mongo][Ejercicio 18 - Mongo]]
 
 Trabajando con MySQL
 
-.caption [[https://github.com/rfinochi/golang-workshop-src/tree/master/19-dbaccess/mysql][Ejercicio 18 - MySQL]]
+.caption [[https://github.com/rfinochi/golang-workshop-src/tree/master/18-dbaccess/mysql][Ejercicio 18 - MySQL]]
 
 * Programando una API REST - HTTP Router
 
@@ -128,13 +128,13 @@ Se instala con:
 
 * Programando una API REST - HTTP Router
 
-.caption [[https://github.com/rfinochi/golang-workshop-src/tree/master/18-rest-api][Ejercicio 19]]
+.caption [[https://github.com/rfinochi/golang-workshop-src/tree/master/19-rest-api][Ejercicio 19]]
 
 .code ./resources/src/rest-api.go
 
 * Programando una API REST - JSON Encoding
 
-.caption [[https://github.com/rfinochi/golang-workshop-src/tree/master/18-rest-api][Ejercicio 19]]
+.caption [[https://github.com/rfinochi/golang-workshop-src/tree/master/19-rest-api][Ejercicio 19]]
 
 - Para trabajar JSON vamos a usar el paquete [[https://golang.org/pkg/encoding/json/][encoding/json]].
 - Se utilizan las funciones *Marshal* y *Encode*.
@@ -186,4 +186,4 @@ Modificar la API Rest del challenge 4.1 para que pueda acceder a diferentes fuen
 
 Hints:
 
-- Se pueden copiar las funciones necesarias para operar con MongoDB / mySql desde el [[https://github.com/rfinochi/golang-workshop-src/tree/master/19-dbaccess][Ejercicio 19]].
+- Se pueden copiar las funciones necesarias para operar con MongoDB / MySQL desde el [[https://github.com/rfinochi/golang-workshop-src/tree/master/19-dbaccess][Ejercicio 19]].
