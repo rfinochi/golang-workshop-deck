@@ -82,7 +82,7 @@ Esto quiere decir que:
 
 * Programacion funcional - Ventajas
 
-- *Codigo* *mas* *limpio*: las _variables_ no se modifican una vez que se definene, por lo tanto no tenemos que seguir los cambios de estado por todo el codigo para comprender como funciona el codigo de un programa.
+- *Codigo* *mas* *limpio*: las _variables_ no se modifican una vez que se define, por lo tanto no tenemos que seguir los cambios de estado por todo el codigo para comprender como funciona el codigo de un programa.
 - *Referential* *transparency*: Las expresiones pueden ser reemplazadas por sus valores. Si llamamos a una funcion con los mismo valores, estamos seguros que el resultado es el mismo (no hay estado en ningun otro codigo del programa que pueda cambiar el resultado).
 
 	No hay razon para lo que Einstein definio como locura:
