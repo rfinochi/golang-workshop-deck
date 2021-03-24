@@ -226,8 +226,8 @@ Abrir la aplicacion
 - Crear un nuevo Web Site en el portal de Azure
 - Instalar Go via la consola
 
-    $ curl -O https://storage.googleapis.com/golang/go1.15.windows-386.zip
-    $ unzip go1.15.windows-386.zip
+    $ curl -O https://storage.googleapis.com/golang/go1.16.windows-386.zip
+    $ unzip go1.16.windows-386.zip
 
     Comprobar la ultima version en https://golang.org/dl
     No preocuparse si aparece el error Bad Request
