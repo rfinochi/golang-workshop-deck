@@ -1,3 +1,5 @@
+package main
+
 func BenchmarkFibonacciWrong(b *testing.B) {
         for n := 0; n < b.N; n++ {
                 Fibonacci(n)

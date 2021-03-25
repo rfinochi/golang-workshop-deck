@@ -1,3 +1,5 @@
+package main
+
 type Dog struct{}
 
 func (d *Dog) Bark() string {

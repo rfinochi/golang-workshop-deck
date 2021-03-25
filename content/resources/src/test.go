@@ -1,3 +1,5 @@
+package main
+
 func TestFibonacci(t *testing.T) {
 	var in int = 10
 	var want int = 55

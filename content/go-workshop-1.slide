@@ -151,7 +151,7 @@ Comandos basicos desde consola
 
 .caption [[https://github.com/rfinochi/golang-workshop-src/tree/master/06-functions][Ejercicio 6]]
 
-.code -edit -numbers ./resources/src/functions_2.go
+.play -edit -numbers ./resources/src/functions_2.go
 
 * Instrucciones de control - if
 

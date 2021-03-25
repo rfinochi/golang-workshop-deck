@@ -140,7 +140,7 @@ Se instala con:
 
 .play -edit -numbers ./resources/src/rest-api-json.go
 
-## Middlewares
+* Middlewares
 
 - Cualquier funcionalidad compartida que se desee reutilizar para distintas *requests HTTP* se puede desarrollar como un *middleware*. 
 - Por ejemplo, es posible que se desee registrar cada request, comprimir cada respuesta o verificar un caché.

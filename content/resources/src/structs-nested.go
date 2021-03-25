@@ -1,3 +1,5 @@
+package main
+
 type Address struct {
     city, state string
 }

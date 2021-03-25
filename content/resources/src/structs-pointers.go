@@ -1,3 +1,5 @@
+package main
+
 func (e *Employee) updateAge(newAge int) {
     e.age = newAge
 }
