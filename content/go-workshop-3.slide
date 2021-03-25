@@ -6,9 +6,6 @@ Rodolfo Finochietti
 [[https://rodolfofinochietti.me]]
 @rodolfof
 
-Mariano Sánchez
-@marianosz
-
 * Error Handling
 
 El manejo de excepciones es una de las caracteristicas mas controversiales en Golang.
@@ -167,6 +164,8 @@ El patrón estándar para crear un *middleware* custom es el siguiente:
 
 .image ./resources/images/chalenge-accepted.jpg 150 _
 
+.caption [[https://github.com/rfinochi/golang-workshop-src/tree/master/challenge3/3.2][Instrucciones del challenge 3.2]]
+
 Crear una API REST para una aplicacion de recordatorios (To-Do) que contenga todas las funciones [[https://en.wikipedia.org/wiki/Create,_read,_update_and_delete][CRUD]] para la siguiente entidad:
 
 	ID     int
@@ -182,7 +181,9 @@ Hints:
 
 .image ./resources/images/chalenge-accepted.jpg 150 _
 
-Modificar la API Rest del challenge 4.1 para que pueda acceder a diferentes fuentes de datos (en memoria y (MongoDB / mysql)) usando el patron [[https://medium.com/@pererikbergman/repository-design-pattern-e28c0f3e4a30][Repository]].
+.caption [[https://github.com/rfinochi/golang-workshop-src/tree/master/challenge3/3.3][Instrucciones del challenge 3.3]]
+
+Modificar la API Rest del challenge 3.2 para que pueda acceder a diferentes fuentes de datos (en memoria y (MongoDB / MySQL)) usando el patron [[https://medium.com/@pererikbergman/repository-design-pattern-e28c0f3e4a30][Repository]].
 
 Hints:
 

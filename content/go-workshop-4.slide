@@ -6,9 +6,6 @@ Rodolfo Finochietti
 [[https://rodolfofinochietti.me]]
 @rodolfof
 
-Mariano Sánchez
-@marianosz
-
 * Programando una App Web - HTTP Router
 
 .caption [[https://github.com/rfinochi/golang-workshop-src/tree/master/20-web-ui][Ejercicio 20]]
@@ -263,8 +260,10 @@ Abrir la aplicacion
 
 .image ./resources/images/review-time.png 500 _
 
-* Challenge 4.1
+* Challenge 4
 
 .image ./resources/images/chalenge-accepted.jpg 150 _
 
-Modificar la API Rest del challenge 3.2 para usar Gin.
+.caption [[https://github.com/rfinochi/golang-workshop-src/tree/master/challenge4][Instrucciones del challenge 4]]
+
+Modificar la API Rest del challenge 3.3 para usar Gin.

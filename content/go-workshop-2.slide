@@ -6,9 +6,6 @@ Rodolfo Finochietti
 [[https://rodolfofinochietti.me]]
 @rodolfof
 
-Mariano Sánchez
-@marianosz
-
 * Linea de comandos - Argumentos
 
 .caption [[https://github.com/rfinochi/golang-workshop-src/tree/master/11-cmdline][Ejercicio 11]]
@@ -262,17 +259,23 @@ La inicializacion implicita mas el _&_ es equivalente a _new_.
 
 .image ./resources/images/chalenge-accepted.jpg 150 _
 
+.caption [[https://github.com/rfinochi/golang-workshop-src/tree/master/challenge2/2.1][Instrucciones del challenge 2.1]]
+
 Cambiar el programa para que el parametro string de la funcion _Reverse_ se obtenga desde la linea de comandos con un flag llamado _text_.
 
 * Challenge 2.2
 
 .image ./resources/images/chalenge-accepted.jpg 150 _
 
+.caption [[https://github.com/rfinochi/golang-workshop-src/tree/master/challenge2/2.2][Instrucciones del challenge 2.2]]
+
 Crear un _unit_ _test_, un _benchmark_, y un _example_ para la funcion _Reverse_.
 
 * Challenge 2.3
 
 .image ./resources/images/chalenge-accepted.jpg 150 _
+
+.caption [[https://github.com/rfinochi/golang-workshop-src/tree/master/challenge2/2.3][Instrucciones del challenge 2.3]]
 
 Modelar la funcionalidad de un sistema de precios para una aerolinea que calcule los ingresos netos de un vuelo en base a los pasajeros y el precio base del ticket.
 
@@ -288,10 +291,14 @@ Existen 3 tipos de pasajeros:
 
 .image ./resources/images/chalenge-accepted.jpg 150 _
 
+.caption [[https://github.com/rfinochi/golang-workshop-src/tree/master/challenge2/2.4][Instrucciones del challenge 2.4]]
+
 Crear un _test_ para verificar el codigo creado en el challenge 2.3 anterior.
 
 * Challenge 2.5
 
 .image ./resources/images/chalenge-accepted.jpg 150 _
+
+.caption [[https://github.com/rfinochi/golang-workshop-src/tree/master/challenge2/2.5][Instrucciones del challenge 2.5]]
 
 Agregar un nuevo tipo de pasajero 'empleado de aerolinea de ultimo minuto' cuyo descuento sea la suma de los descuentos de los tipos de pasajero 'empleado de aerolinea' y 'ultimo minuto'.
