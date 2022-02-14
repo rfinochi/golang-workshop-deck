@@ -7,9 +7,81 @@ git:
   depth: 1
 before_install:
 - openssl aes-256-cbc -K $encrypted_2fd045226a67_key -iv $encrypted_2fd045226a67_iv -in client-secret.json.enc -out client-secret.json -d
-- rm -r ./content/resources/src
+- mv ./content/resources/src/arrays.go ./content/resources/src/arrays.x
+- mv ./content/resources/src/arrays-range.go ./content/resources/src/arrays-range.x
+- mv ./content/resources/src/arrays-slices.go ./content/resources/src/arrays-slices.x
+- mv ./content/resources/src/arrays-value-type.go ./content/resources/src/arrays-value-type.x
+- mv ./content/resources/src/cmdline-args.go ./content/resources/src/cmdline-args.x
+- mv ./content/resources/src/cmdline-env.go ./content/resources/src/cmdline-env.x
+- mv ./content/resources/src/cmdline-flags.go ./content/resources/src/cmdline-flags.x
+- mv ./content/resources/src/for-printTower.go ./content/resources/src/for-printTower.x
+- mv ./content/resources/src/for-range.go ./content/resources/src/for-range.x
+- mv ./content/resources/src/for-simple.go ./content/resources/src/for-simple.x
+- mv ./content/resources/src/for-simpleBreak.go ./content/resources/src/for-simpleBreak.x
+- mv ./content/resources/src/for-simpleContinue.go ./content/resources/src/for-simpleContinue.x
+- mv ./content/resources/src/functions_1.go ./content/resources/src/functions_1.x
+- mv ./content/resources/src/functions_2.go ./content/resources/src/functions_2.x
+- mv ./content/resources/src/hello-world.go ./content/resources/src/hello-world.x
+- mv ./content/resources/src/if.go ./content/resources/src/if.x
+- mv ./content/resources/src/maps.go ./content/resources/src/maps.x
+- mv ./content/resources/src/operators.go ./content/resources/src/operators.x
+- mv ./content/resources/src/rest-api.go ./content/resources/src/rest-api.x
+- mv ./content/resources/src/rest-api-middleware.go ./content/resources/src/rest-api-middleware.x
+- mv ./content/resources/src/structs.go ./content/resources/src/structs.x
+- mv ./content/resources/src/structs-composed.go ./content/resources/src/structs-composed.x
+- mv ./content/resources/src/structs-methods.go ./content/resources/src/structs-methods.x
+- mv ./content/resources/src/structs-nested.go ./content/resources/src/structs-nested.x
+- mv ./content/resources/src/structs-pointers.go ./content/resources/src/structs-pointers.x
+- mv ./content/resources/src/switch.go ./content/resources/src/switch.x
+- mv ./content/resources/src/test.go ./content/resources/src/test.x
+- mv ./content/resources/src/test-benchmark.go ./content/resources/src/test-benchmark.x
+- mv ./content/resources/src/test-benchmark-wrong.go ./content/resources/src/test-benchmark-wrong.x
+- mv ./content/resources/src/test-example.go ./content/resources/src/test-example.x
+- mv ./content/resources/src/types.go ./content/resources/src/types.x
+- mv ./content/resources/src/variables.go ./content/resources/src/variables.x
+
+before_deploy:
+- rm ./.github/ISSUE_TEMPLATE/bug_report.md
+- rm ./client-secret.json.enc
+- rm ./LICENSE
+- rm ./README.md
+- rm ./OSSMETADATA
+- rmdir ./.github/ISSUE_TEMPLATE
+- mv ./content/resources/src/arrays.x ./content/resources/src/arrays.go
+- mv ./content/resources/src/arrays-range.x ./content/resources/src/arrays-range.go
+- mv ./content/resources/src/arrays-slices.x ./content/resources/src/arrays-slices.go
+- mv ./content/resources/src/arrays-value-type.x ./content/resources/src/arrays-value-type.go
+- mv ./content/resources/src/cmdline-args.x ./content/resources/src/cmdline-args.go
+- mv ./content/resources/src/cmdline-env.x ./content/resources/src/cmdline-env.go
+- mv ./content/resources/src/cmdline-flags.x ./content/resources/src/cmdline-flags.go
+- mv ./content/resources/src/for-printTower.x ./content/resources/src/for-printTower.go
+- mv ./content/resources/src/for-range.x ./content/resources/src/for-range.go
+- mv ./content/resources/src/for-simple.x ./content/resources/src/for-simple.go
+- mv ./content/resources/src/for-simpleBreak.x ./content/resources/src/for-simpleBreak.go
+- mv ./content/resources/src/for-simpleContinue.x ./content/resources/src/for-simpleContinue.go
+- mv ./content/resources/src/functions_1.x ./content/resources/src/functions_1.go
+- mv ./content/resources/src/functions_2.x ./content/resources/src/functions_2.go
+- mv ./content/resources/src/hello-world.x ./content/resources/src/hello-world.go
+- mv ./content/resources/src/if.x ./content/resources/src/if.go
+- mv ./content/resources/src/maps.x ./content/resources/src/maps.go
+- mv ./content/resources/src/operators.x ./content/resources/src/operators.go
+- mv ./content/resources/src/rest-api.x ./content/resources/src/rest-api.go
+- mv ./content/resources/src/rest-api-middleware.x ./content/resources/src/rest-api-middleware.go
+- mv ./content/resources/src/structs.x ./content/resources/src/structs.go
+- mv ./content/resources/src/structs-composed.x ./content/resources/src/structs-composed.go
+- mv ./content/resources/src/structs-methods.x ./content/resources/src/structs-methods.go
+- mv ./content/resources/src/structs-nested.x ./content/resources/src/structs-nested.go
+- mv ./content/resources/src/structs-pointers.x ./content/resources/src/structs-pointers.go
+- mv ./content/resources/src/switch.x ./content/resources/src/switch.go
+- mv ./content/resources/src/test.x ./content/resources/src/test.go
+- mv ./content/resources/src/test-benchmark.x ./content/resources/src/test-benchmark.go
+- mv ./content/resources/src/test-benchmark-wrong.x ./content/resources/src/test-benchmark-wrong.go
+- mv ./content/resources/src/test-example.x ./content/resources/src/test-example.go
+- mv ./content/resources/src/types.x ./content/resources/src/types.go
+- mv ./content/resources/src/variables.x ./content/resources/src/variables.go
 
 deploy:
   provider: gae
+  skip_cleanup: true
   keyfile: client-secret.json
   project: golang-workshop-deck
