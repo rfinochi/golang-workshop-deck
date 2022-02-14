@@ -85,7 +85,7 @@ before_deploy:
 - mv ./content/resources/src/variables.x ./content/resources/src/variables.go
 
 deploy:
-  provider: gae
   skip_cleanup: true
+  provider: gae
   keyfile: client-secret.json
   project: golang-workshop-deck
