@@ -14,6 +14,7 @@ before_install:
 - mv ./content/resources/src/cmdline-args.go ./content/resources/src/cmdline-args.x
 - mv ./content/resources/src/cmdline-env.go ./content/resources/src/cmdline-env.x
 - mv ./content/resources/src/cmdline-flags.go ./content/resources/src/cmdline-flags.x
+- mv ./content/resources/src/files.go ./content/resources/src/for-printTower.x
 - mv ./content/resources/src/for-printTower.go ./content/resources/src/for-printTower.x
 - mv ./content/resources/src/for-range.go ./content/resources/src/for-range.x
 - mv ./content/resources/src/for-simple.go ./content/resources/src/for-simple.x
@@ -26,6 +27,7 @@ before_install:
 - mv ./content/resources/src/maps.go ./content/resources/src/maps.x
 - mv ./content/resources/src/operators.go ./content/resources/src/operators.x
 - mv ./content/resources/src/rest-api.go ./content/resources/src/rest-api.x
+- mv ./content/resources/src/rest-api-json.go ./content/resources/src/rest-api-json.x
 - mv ./content/resources/src/rest-api-middleware.go ./content/resources/src/rest-api-middleware.x
 - mv ./content/resources/src/structs.go ./content/resources/src/structs.x
 - mv ./content/resources/src/structs-composed.go ./content/resources/src/structs-composed.x
@@ -54,6 +56,7 @@ before_deploy:
 - mv ./content/resources/src/cmdline-args.x ./content/resources/src/cmdline-args.go
 - mv ./content/resources/src/cmdline-env.x ./content/resources/src/cmdline-env.go
 - mv ./content/resources/src/cmdline-flags.x ./content/resources/src/cmdline-flags.go
+- mv ./content/resources/src/files.x ./content/resources/src/for-printTower.go
 - mv ./content/resources/src/for-printTower.x ./content/resources/src/for-printTower.go
 - mv ./content/resources/src/for-range.x ./content/resources/src/for-range.go
 - mv ./content/resources/src/for-simple.x ./content/resources/src/for-simple.go
@@ -66,6 +69,7 @@ before_deploy:
 - mv ./content/resources/src/maps.x ./content/resources/src/maps.go
 - mv ./content/resources/src/operators.x ./content/resources/src/operators.go
 - mv ./content/resources/src/rest-api.x ./content/resources/src/rest-api.go
+- mv ./content/resources/src/rest-api-json.x ./content/resources/src/rest-api-json.go
 - mv ./content/resources/src/rest-api-middleware.x ./content/resources/src/rest-api-middleware.go
 - mv ./content/resources/src/structs.x ./content/resources/src/structs.go
 - mv ./content/resources/src/structs-composed.x ./content/resources/src/structs-composed.go
