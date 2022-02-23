@@ -90,12 +90,7 @@ deploy:
   keyfile: client-secret.json
   project: golang-workshop-deck
 
-after_success:
-  - wget https://raw.githubusercontent.com/DiscordHooks/travis-ci-discord-webhook/master/send.sh
-  - chmod +x send.sh
-  - ./send.sh success $WEBHOOK_URL
-  
-after_failure:
-  - wget https://raw.githubusercontent.com/DiscordHooks/travis-ci-discord-webhook/master/send.sh
-  - chmod +x send.sh
-  - ./send.sh failure $WEBHOOK_URL
+notifications:
+  webhooks:
+    urls:
+      - https://discord.com/api/webhooks/945888163358990358/mnTL0J2Chcj-h4CdNedKiBn8HCMvGLNFrUqAkoP7qqoLGfSUdQoQ3PZJ8ZfcvVhUAQl-/travis
