@@ -84,6 +84,16 @@ before_deploy:
 - mv ./content/resources/src/types.x ./content/resources/src/types.go
 - mv ./content/resources/src/variables.x ./content/resources/src/variables.go
 
+after_success:
+  - wget https://raw.githubusercontent.com/DiscordHooks/travis-ci-discord-webhook/master/send.sh
+  - chmod +x send.sh
+  - ./send.sh success $WEBHOOK_URL
+  
+after_failure:
+  - wget https://raw.githubusercontent.com/DiscordHooks/travis-ci-discord-webhook/master/send.sh
+  - chmod +x send.sh
+  - ./send.sh failure $WEBHOOK_URL
+
 deploy:
   skip_cleanup: true
   provider: gae
