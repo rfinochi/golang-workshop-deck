@@ -97,9 +97,6 @@ before_deploy:
 - mv ./content/resources/src/types.x ./content/resources/src/types.go
 - mv ./content/resources/src/variables.x ./content/resources/src/variables.go
 
-install:
-  - pip install -r requirements.txt 
-
 after_success:
   - wget https://raw.githubusercontent.com/DiscordHooks/travis-ci-discord-webhook/master/send.sh
   - chmod +x send.sh
