@@ -1,7 +1,6 @@
 dist: focal
 arch: amd64
 
-
 language: python
 
 python:
